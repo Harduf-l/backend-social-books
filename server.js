@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 
 const userRouter = require("./routes/userRoutes");
 const bookRouter = require("./routes/bookRouter");
+const messagesRouter = require("./routes/messagesRoutes");
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -21,6 +22,7 @@ connection.once("open", () => {
 
 app.use("/users", userRouter);
 app.use("/books", bookRouter);
+app.use("/messages", messagesRouter);
 
 app.listen(5005, () => {
   console.log("server is running");

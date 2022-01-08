@@ -5,11 +5,10 @@ const fs = require("fs");
 const bcrypt = require("bcryptjs");
 
 exports.getById = async (req, res) => {
-  console.log("hi");
   const { id } = req.params;
   try {
     const foundUser = await User.findById(id);
-    res.send({ status: "ok", user: foundUser });
+    res.status(200).json(foundUser);
   } catch {
     res.status(401).json({ message: "user not found" });
   }
@@ -76,7 +75,7 @@ exports.addUser = async (req, res) => {
   console.log(req.body);
   const newUser = {
     ...req.body,
-    picture: req.file.filename,
+    picture: req.file ? req.file.filename : null,
     password: encryptedPassword,
     genres: genresArray,
   };
@@ -93,14 +92,15 @@ exports.addUser = async (req, res) => {
 
     return res.json({ status: "ok", userDetails: response, suggestedUsers });
   } catch (error) {
-    // deleting picture file because the user wasn't approved/created
-    const pathToDelete = path.join(__dirname, "public", req.file.filename);
-    try {
-      fs.unlinkSync(pathToDelete);
-    } catch (err) {
-      console.error(err);
+    // first, deleting picture file because the user wasn't approved/created
+    if (req.file) {
+      const pathToDelete = path.join(__dirname, "public", req.file.filename);
+      try {
+        fs.unlinkSync(pathToDelete);
+      } catch (err) {
+        console.error(err);
+      }
     }
-
     if (error.code === 11000) {
       //means it's duplicate key (user tried to register with same email)
       return res.json({ status: "error", error: "Duplicated email" });
