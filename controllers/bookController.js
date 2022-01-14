@@ -31,10 +31,47 @@ exports.getBooksList = (req, res) => {
     });
 };
 
+exports.getSingleBookData = (req, res) => {
+  const bookId = req.query.bookId;
+  axios
+    .get(`https://simania.co.il/bookdetails.php?item_id=${bookId}`)
+    .then((response) => {
+      const markup = response.data;
+      const $ = cheerio.load(markup);
+
+      const bookArea = $(".description")[0];
+      const bookDescription = bookArea.children[0].data;
+
+      constDetailsArea = $(".when")[0];
+      const printedBy = constDetailsArea.children[1].children[0].data;
+      let yearReleased = constDetailsArea.children[3].children[0].data;
+      let pagesInBook = constDetailsArea.children[5].children[0].data;
+
+      pagesInBook = +pagesInBook;
+      yearReleased = +yearReleased;
+
+      if (yearReleased && yearReleased < 1600) {
+        pagesInBook = yearReleased;
+        yearReleased = null;
+      }
+
+      if (pagesInBook && pagesInBook > 1600) {
+        yearReleased = pagesInBook;
+        pagesInBook = null;
+      }
+
+      res
+        .status(200)
+        .json({ bookDescription, printedBy, yearReleased, pagesInBook });
+    })
+    .catch((err) => {
+      res.status(500).json(err);
+    });
+};
+
 exports.getBooksListData = (req, res) => {
   const searchWord = req.query.search;
   let encodedWord = encodeURI(searchWord);
-  console.log(searchWord);
 
   axios
     .get(
@@ -102,6 +139,6 @@ exports.getBooksListData = (req, res) => {
     })
     .catch((err) => {
       console.log(err);
-      res.json(err);
+      res.status(500).json(err);
     });
 };
