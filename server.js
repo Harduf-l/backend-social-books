@@ -24,7 +24,7 @@ app.use("/users", userRouter);
 app.use("/books", bookRouter);
 app.use("/messages", messagesRouter);
 
-const server = app.listen(PORT, () => {
+server = app.listen(PORT, () => {
   console.log("server is running");
 });
 
@@ -45,8 +45,11 @@ const removeUser = (socketId) => {
   usersOnline = usersOnline.filter((user) => user.socketId !== socketId);
 };
 
+const getUser = (userId) => {
+  return usersOnline.find((user) => user.userId === userId);
+};
+
 io.on("connection", (socket) => {
-  console.log("connected to backend socket");
   io.emit("welcome", "hello this is from backend socket");
 
   socket.on("addUser", (userId) => {
@@ -56,6 +59,20 @@ io.on("connection", (socket) => {
 
   socket.on("disconnect", () => {
     removeUser(socket.id);
+
     io.emit("getUsers", usersOnline);
+  });
+
+  // send and get messages
+  socket.on("sendMessage", ({ senderId, receiverId, text }) => {
+    const user = getUser(receiverId);
+    console.log(text);
+    console.log("send to ", user);
+    if (user) {
+      io.to(user.socketId).emit("getMessage", {
+        sender: senderId,
+        text,
+      });
+    }
   });
 });
