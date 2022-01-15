@@ -40,12 +40,33 @@ exports.getSingleBookData = (req, res) => {
       const $ = cheerio.load(markup);
 
       const bookArea = $(".description")[0];
-      const bookDescription = bookArea.children[0].data;
+      bookAreaChildren = bookArea.children;
+      let bigDataStr = "";
+
+      for (let i = 0; i < bookAreaChildren.length; i++) {
+        if (bookAreaChildren[i].data) {
+          bigDataStr += bookAreaChildren[i].data + " ";
+        }
+      }
+
+      let bookDescription = bookArea ? bigDataStr : null;
 
       constDetailsArea = $(".when")[0];
-      const printedBy = constDetailsArea.children[1].children[0].data;
-      let yearReleased = constDetailsArea.children[3].children[0].data;
-      let pagesInBook = constDetailsArea.children[5].children[0].data;
+
+      let printedBy = null;
+      let yearReleased = null;
+      let pagesInBook = null;
+      if (constDetailsArea) {
+        printedBy =
+          constDetailsArea.children[1] &&
+          constDetailsArea.children[1].children[0].data;
+        yearReleased =
+          constDetailsArea.children[3] &&
+          constDetailsArea.children[3].children[0].data;
+        pagesInBook =
+          constDetailsArea.children[5] &&
+          constDetailsArea.children[5].children[0].data;
+      }
 
       pagesInBook = +pagesInBook;
       yearReleased = +yearReleased;
@@ -65,6 +86,7 @@ exports.getSingleBookData = (req, res) => {
         .json({ bookDescription, printedBy, yearReleased, pagesInBook });
     })
     .catch((err) => {
+      console.log(err);
       res.status(500).json(err);
     });
 };

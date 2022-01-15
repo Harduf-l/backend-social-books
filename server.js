@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const userRouter = require("./routes/userRoutes");
 const bookRouter = require("./routes/bookRouter");
 const messagesRouter = require("./routes/messagesRoutes");
+const autoCompleteRouter = require("./routes/autoCompleteRouter");
 const app = express();
 const PORT = process.env.PORT || 5005;
 
@@ -23,6 +24,7 @@ connection.once("open", () => {
 app.use("/users", userRouter);
 app.use("/books", bookRouter);
 app.use("/messages", messagesRouter);
+app.use("/autoComplete", autoCompleteRouter);
 
 server = app.listen(PORT, () => {
   console.log("server is running");
