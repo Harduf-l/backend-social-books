@@ -3,6 +3,10 @@ const path = require("path");
 const jwt = require("jsonwebtoken");
 const fs = require("fs");
 const bcrypt = require("bcryptjs");
+const {
+  chooseRandomAmount,
+  getRecommendedBooksBasedOnGenres,
+} = require("../utils");
 
 exports.getById = async (req, res) => {
   const { id } = req.params;
@@ -25,9 +29,19 @@ exports.tokenCheck = async (req, res) => {
       suggestedUsers = await User.find({
         genres: { $in: foundUser.genres },
         email: { $ne: foundUser.email },
-      }).limit(5);
+      });
+      suggestedUsers = chooseRandomAmount(suggestedUsers, 5);
 
-      res.json({ status: "ok", userDetails: foundUser, suggestedUsers });
+      const recommendationBookArray = await getRecommendedBooksBasedOnGenres(
+        foundUser.genres
+      );
+
+      res.json({
+        status: "ok",
+        userDetails: foundUser,
+        suggestedUsers,
+        recommendationBookArray,
+      });
     } catch {
       res.json({ status: "error", error: "access blocked" });
     }
@@ -55,13 +69,19 @@ exports.login = async (req, res) => {
     suggestedUsers = await User.find({
       genres: { $in: user.genres },
       email: { $ne: user.email },
-    }).limit(5);
+    });
+
+    suggestedUsers = chooseRandomAmount(suggestedUsers, 5);
+    const recommendationBookArray = await getRecommendedBooksBasedOnGenres(
+      foundUser.genres
+    );
 
     return res.send({
       status: "ok",
       token: token,
       userDetails: user,
       suggestedUsers,
+      recommendationBookArray,
     });
   } else {
     return res.json({ status: "error", error: "invalid username/password" });
@@ -85,12 +105,23 @@ exports.addUser = async (req, res) => {
     delete response.password;
 
     let suggestedUsers = [];
+
     suggestedUsers = await User.find({
       genres: { $in: response.genres },
       email: { $ne: response.email },
-    }).limit(5);
+    });
+    suggestedUsers = chooseRandomAmount(suggestedUsers, 5);
 
-    return res.json({ status: "ok", userDetails: response, suggestedUsers });
+    const recommendationBookArray = await getRecommendedBooksBasedOnGenres(
+      foundUser.genres
+    );
+
+    return res.json({
+      status: "ok",
+      userDetails: response,
+      suggestedUsers,
+      recommendationBookArray,
+    });
   } catch (error) {
     // first, deleting picture file because the user wasn't approved/created
     if (req.file) {
