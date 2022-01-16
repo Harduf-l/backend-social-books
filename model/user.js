@@ -9,6 +9,9 @@ const UserSchema = new mongoose.Schema(
     picture: { type: String },
     genres: { type: Array, required: true },
     birthday: { type: Object },
+    city: { type: String },
+    freeText: { type: String },
+    writingDescription: { type: String },
   },
   { collection: "users" }
 );
