@@ -26,6 +26,7 @@ const upload = multer({
 });
 
 router.post("/token-check", userController.tokenCheck);
+router.post("/token-check-no-data", userController.tokenCheckNoData);
 router.post("/login", userController.login);
 router.post("/add-user", upload.single("photo"), userController.addUser);
 router.get("/get-by-id/:id", userController.getById);

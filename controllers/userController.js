@@ -17,13 +17,36 @@ exports.getById = async (req, res) => {
     res.status(401).json({ message: "user not found" });
   }
 };
-exports.tokenCheck = async (req, res) => {
+
+exports.tokenCheckNoData = async (req, res) => {
   const { token } = req.body;
   if (token) {
     try {
       const user = jwt.verify(token, process.env.JWT_SECRET);
       const _id = user.id;
+      await User.findById(_id);
+
+      res.status(200).json({
+        status: "ok",
+      });
+    } catch {
+      res.staus(500).json({ status: "error", error: "access blocked" });
+    }
+  } else {
+    res.status(500).json({ status: "not connected" });
+  }
+};
+
+exports.tokenCheck = async (req, res) => {
+  const { token } = req.body;
+
+  if (token) {
+    try {
+      const user = jwt.verify(token, process.env.JWT_SECRET);
+      const _id = user.id;
+
       const foundUser = await User.findById(_id);
+
       delete foundUser.password;
       let suggestedUsers = [];
       suggestedUsers = await User.find({
@@ -46,7 +69,8 @@ exports.tokenCheck = async (req, res) => {
       res.json({ status: "error", error: "access blocked" });
     }
   } else {
-    res.json({ status: "not connected" });
+    console.log("didn't get access");
+    res.status(500).json({ status: "not connected" });
   }
 };
 
@@ -73,7 +97,7 @@ exports.login = async (req, res) => {
 
     suggestedUsers = chooseRandomAmount(suggestedUsers, 5);
     const recommendationBookArray = await getRecommendedBooksBasedOnGenres(
-      foundUser.genres
+      user.genres
     );
 
     return res.send({
@@ -92,7 +116,7 @@ exports.addUser = async (req, res) => {
   const { password, genres } = req.body;
   const encryptedPassword = await bcrypt.hash(password, 10);
   const genresArray = genres.split(",");
-  console.log(req.body);
+
   const newUser = {
     ...req.body,
     picture: req.file ? req.file.filename : null,
@@ -101,37 +125,37 @@ exports.addUser = async (req, res) => {
   };
 
   try {
-    const response = await User.create(newUser);
-    delete response.password;
+    const user = await User.create(newUser);
+    delete user.password;
 
     let suggestedUsers = [];
 
     suggestedUsers = await User.find({
-      genres: { $in: response.genres },
-      email: { $ne: response.email },
+      genres: { $in: user.genres },
+      email: { $ne: user.email },
     });
     suggestedUsers = chooseRandomAmount(suggestedUsers, 5);
 
     const recommendationBookArray = await getRecommendedBooksBasedOnGenres(
-      foundUser.genres
+      user.genres
     );
 
     return res.json({
       status: "ok",
-      userDetails: response,
+      userDetails: user,
       suggestedUsers,
       recommendationBookArray,
     });
   } catch (error) {
     // first, deleting picture file because the user wasn't approved/created
-    if (req.file) {
-      const pathToDelete = path.join(__dirname, "public", req.file.filename);
-      try {
-        fs.unlinkSync(pathToDelete);
-      } catch (err) {
-        console.error(err);
-      }
-    }
+    // if (req.file) {
+    //   const pathToDelete = path.join(__dirname, "public", req.file.filename);
+    //   try {
+    //     fs.unlinkSync(pathToDelete);
+    //   } catch (err) {
+    //     console.error(err);
+    //   }
+    // }
     if (error.code === 11000) {
       //means it's duplicate key (user tried to register with same email)
       return res.json({ status: "error", error: "Duplicated email" });

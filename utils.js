@@ -6,7 +6,7 @@ exports.chooseRandomAmount = (dataArray, amount) => {
 };
 
 function chooseRandomAmountFunction(dataArray, amount) {
-  if (dataArray.length < amount) {
+  if (dataArray.length <= amount) {
     return dataArray;
   }
 
@@ -55,7 +55,10 @@ exports.getRecommendedBooksBasedOnGenres = async (genresArray) => {
   possibleAxiosRequests = chooseRandomAmountFunction(possibleAxiosRequests, 2);
 
   let bookArray = await getBooksList(possibleAxiosRequests[0]);
-  let bookArray2 = await getBooksList(possibleAxiosRequests[1]);
+  let bookArray2 = [];
+  if (possibleAxiosRequests[1]) {
+    bookArray2 = await getBooksList(possibleAxiosRequests[1]);
+  }
 
   return chooseRandomAmountFunction([...bookArray, ...bookArray2], 10);
 };
