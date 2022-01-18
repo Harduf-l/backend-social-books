@@ -25,6 +25,17 @@ exports.getConversationsOfUser = async (req, res) => {
   }
 };
 
+exports.checkIfConversationAlreadyExist = async (req, res) => {
+  try {
+    const conversation = await Conversation.find({
+      members: { $all: [req.params.userId, req.params.friendId] },
+    });
+    res.status(200).json(conversation);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+};
+
 exports.addMessage = async (req, res) => {
   const newMessage = new Message(req.body);
 

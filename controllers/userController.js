@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 const fs = require("fs");
 const bcrypt = require("bcryptjs");
 require("dotenv").config();
-const { addUserPhoto } = require("../helpers/cloudinary");
+const { addUserPhoto, removeUserPhoto } = require("../helpers/cloudinary");
 
 const {
   chooseRandomAmount,
@@ -135,6 +135,7 @@ exports.addUser = async (req, res) => {
   const newUser = {
     ...req.body,
     picture: imageResponse ? imageResponse.url : null,
+    public_picture_id: imageResponse ? imageResponse.public_id : null,
     password: encryptedPassword,
   };
 
@@ -161,6 +162,12 @@ exports.addUser = async (req, res) => {
       recommendationBookArray,
     });
   } catch (error) {
+    // first, let's remove image from cloudinary
+    if (imageResponse) {
+      removeUserPhoto(imageResponse.public_id);
+    }
+
+    ///
     if (error.code === 11000) {
       //means it's duplicate key (user tried to register with same email)
       return res.json({ status: "error", error: "Duplicated email" });

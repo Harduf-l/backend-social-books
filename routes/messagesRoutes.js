@@ -11,6 +11,10 @@ router.get(
   messagesController.getConversationsOfUser
 );
 
+router.get(
+  "/check-if-conversation-already-exist/:userId/:friendId",
+  messagesController.checkIfConversationAlreadyExist
+);
 // post a message
 router.post("/add-message", messagesController.addMessage);
 

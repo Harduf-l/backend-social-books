@@ -7,6 +7,10 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
+exports.removeUserPhoto = async (fileId) => {
+  await cloudinary.uploader.destroy(fileId);
+};
+
 exports.addUserPhoto = async (fileStr) => {
   try {
     const uploadedResponse = await cloudinary.uploader.upload(fileStr, {
