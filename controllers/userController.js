@@ -3,6 +3,9 @@ const path = require("path");
 const jwt = require("jsonwebtoken");
 const fs = require("fs");
 const bcrypt = require("bcryptjs");
+require("dotenv").config();
+const { addUserPhoto } = require("../helpers/cloudinary");
+
 const {
   chooseRandomAmount,
   getRecommendedBooksBasedOnGenres,
@@ -112,16 +115,27 @@ exports.login = async (req, res) => {
   }
 };
 
+////////////////
+//////////////////
+/////////////////////////////////
+
 exports.addUser = async (req, res) => {
-  const { password, genres } = req.body;
+  const { password } = req.body;
   const encryptedPassword = await bcrypt.hash(password, 10);
-  const genresArray = genres.split(",");
+
+  let imageResponse;
+
+  try {
+    imageResponse = await addUserPhoto(req.body.picture);
+  } catch (err) {
+    console.log(err);
+    imageResponse = null;
+  }
 
   const newUser = {
     ...req.body,
-    picture: req.file ? req.file.filename : null,
+    picture: imageResponse ? imageResponse.url : null,
     password: encryptedPassword,
-    genres: genresArray,
   };
 
   try {
@@ -147,15 +161,6 @@ exports.addUser = async (req, res) => {
       recommendationBookArray,
     });
   } catch (error) {
-    // first, deleting picture file because the user wasn't approved/created
-    // if (req.file) {
-    //   const pathToDelete = path.join(__dirname, "public", req.file.filename);
-    //   try {
-    //     fs.unlinkSync(pathToDelete);
-    //   } catch (err) {
-    //     console.error(err);
-    //   }
-    // }
     if (error.code === 11000) {
       //means it's duplicate key (user tried to register with same email)
       return res.json({ status: "error", error: "Duplicated email" });
