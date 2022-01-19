@@ -52,15 +52,17 @@ exports.getRecommendedBooksBasedOnGenres = async (genresArray) => {
     }
   });
 
-  possibleAxiosRequests = chooseRandomAmountFunction(possibleAxiosRequests, 2);
+  possibleAxiosRequests = chooseRandomAmountFunction(possibleAxiosRequests, 1);
 
   let bookArray = await getBooksList(possibleAxiosRequests[0]);
-  let bookArray2 = [];
-  if (possibleAxiosRequests[1]) {
-    bookArray2 = await getBooksList(possibleAxiosRequests[1]);
-  }
+  /// in the future --- take all the recommendation to be local ///////////
 
-  return chooseRandomAmountFunction([...bookArray, ...bookArray2], 10);
+  // let bookArray2 = [];
+  // if (possibleAxiosRequests[1]) {
+  //   bookArray2 = await getBooksList(possibleAxiosRequests[1]);
+  // }
+
+  return chooseRandomAmountFunction([...bookArray], 10);
 };
 
 const getBooksList = async (stringToAdd) => {

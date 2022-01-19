@@ -1,10 +1,9 @@
 const User = require("../model/user");
-const path = require("path");
 const jwt = require("jsonwebtoken");
-const fs = require("fs");
 const bcrypt = require("bcryptjs");
 require("dotenv").config();
 const { addUserPhoto, removeUserPhoto } = require("../helpers/cloudinary");
+const { pendingConnections } = require("./connectionController");
 
 const {
   chooseRandomAmount,
@@ -62,11 +61,14 @@ exports.tokenCheck = async (req, res) => {
         foundUser.genres
       );
 
+      const myPendingConnections = await pendingConnections(foundUser._id);
+
       res.json({
         status: "ok",
         userDetails: foundUser,
         suggestedUsers,
         recommendationBookArray,
+        myPendingConnections,
       });
     } catch {
       res.json({ status: "error", error: "access blocked" });
@@ -80,35 +82,38 @@ exports.tokenCheck = async (req, res) => {
 exports.login = async (req, res) => {
   const { password, email } = req.body;
 
-  const user = await User.findOne({ email }).lean();
-  if (!user) {
+  const foundUser = await User.findOne({ email }).lean();
+  if (!foundUser) {
     return res.json({ status: "error", error: "invalid username/password" });
   }
-  if (await bcrypt.compare(password, user.password)) {
+  if (await bcrypt.compare(password, foundUser.password)) {
     // the username password is correct
     const token = jwt.sign(
-      { id: user._id, email: user.email },
+      { id: foundUser._id, email: foundUser.email },
       process.env.JWT_SECRET
     );
-    delete user.password;
+    delete foundUser.password;
 
     let suggestedUsers = [];
     suggestedUsers = await User.find({
-      genres: { $in: user.genres },
-      email: { $ne: user.email },
+      genres: { $in: foundUser.genres },
+      email: { $ne: foundUser.email },
     });
 
     suggestedUsers = chooseRandomAmount(suggestedUsers, 5);
     const recommendationBookArray = await getRecommendedBooksBasedOnGenres(
-      user.genres
+      foundUser.genres
     );
+
+    const myPendingConnections = await pendingConnections(foundUser._id);
 
     return res.send({
       status: "ok",
       token: token,
-      userDetails: user,
+      userDetails: foundUser,
       suggestedUsers,
       recommendationBookArray,
+      myPendingConnections,
     });
   } else {
     return res.json({ status: "error", error: "invalid username/password" });
