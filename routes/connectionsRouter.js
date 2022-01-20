@@ -2,8 +2,10 @@ const express = require("express");
 const router = express.Router();
 const connectionController = require("../controllers/connectionController");
 
+router.post("/connection-status", connectionController.connectionStatus);
+
 router.get(
-  "/all-approved-connections",
+  "/all-approved-connections/:userId",
   connectionController.allApprovedConnection
 );
 

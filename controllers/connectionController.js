@@ -1,9 +1,46 @@
 const Connection = require("../model/connection");
 const User = require("../model/user");
 
-exports.sendConnectionRequest = async (req, res) => {
-  console.log(req.body);
+exports.connectionStatus = async (req, res) => {
+  const checkIfConnectionExist = await Connection.find({
+    senderId: req.body.userId,
+    receiverId: req.body.friendId,
+  });
 
+  const checkIfConnectionExistOpposite = await Connection.find({
+    senderId: req.body.friendId,
+    receiverId: req.body.userId,
+  });
+
+  if (!checkIfConnectionExistOpposite[0] && !checkIfConnectionExist[0]) {
+    res.status(200).json("no connection");
+    return;
+  }
+
+  let connectionArray;
+  if (checkIfConnectionExistOpposite[0]) {
+    connectionArray = checkIfConnectionExistOpposite[0];
+  } else {
+    connectionArray = checkIfConnectionExist[0];
+  }
+
+  if (connectionArray.approved) {
+    res.status(200).json("friendhip");
+    return;
+  }
+  if (connectionArray.senderId === req.body.userId) {
+    res.status(200).json("friend request was sent");
+    return;
+  }
+  if (connectionArray.senderId === req.body.friendId) {
+    res.status(200).json("respond to friend request");
+    return;
+  }
+};
+
+////
+
+exports.sendConnectionRequest = async (req, res) => {
   const checkIfConnectionExist = await Connection.find({
     senderId: req.body.senderId,
     receiverId: req.body.receiverId,
@@ -38,7 +75,7 @@ exports.approveConnectionRequest = async (req, res) => {
       { _id: req.body.connectionId },
       { approved: true }
     );
-    console.log(updated);
+
     res.status(200).json(updated);
   } catch (err) {
     res.status(500).json(err);
@@ -46,7 +83,6 @@ exports.approveConnectionRequest = async (req, res) => {
 };
 
 exports.deleteConnectionRequest = async (req, res) => {
-  console.log(req.body);
   try {
     const removedRequest = await Connection.findOneAndDelete({
       _id: req.body.connectionId,
@@ -57,7 +93,40 @@ exports.deleteConnectionRequest = async (req, res) => {
   }
 };
 
-exports.allApprovedConnection = (req, res) => {};
+exports.allApprovedConnection = async (req, res) => {
+  try {
+    const requestsApproved = await Connection.find({
+      $or: [
+        { receiverId: req.params.userId, approved: true },
+        { senderId: req.params.userId, approved: true },
+      ],
+    });
+
+    var requestsApprovedWithUsersData = await Promise.all(
+      requestsApproved.map(async (item) => {
+        let userDataCheck;
+        if (item.senderId === req.params.userId) {
+          userDataCheck = item.receiverId;
+        } else {
+          userDataCheck = item.senderId;
+        }
+        const userData = await User.findById(userDataCheck);
+        return {
+          connectionId: item._id,
+          picture: userData.picture,
+          username: userData.username,
+          _id: userData._id,
+        };
+      })
+    );
+
+    res
+      .status(200)
+      .json({ approvedConnections: requestsApprovedWithUsersData });
+  } catch (err) {
+    res.status(500).json("no connections found");
+  }
+};
 
 exports.pendingConnections = async (userId) => {
   try {
