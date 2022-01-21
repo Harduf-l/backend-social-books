@@ -12,6 +12,11 @@ router.get(
 );
 
 router.get(
+  "/update-should-see/:conversationId",
+  messagesController.updateShouldSee
+);
+
+router.get(
   "/check-if-conversation-already-exist/:userId/:friendId",
   messagesController.checkIfConversationAlreadyExist
 );
@@ -19,6 +24,6 @@ router.get(
 router.post("/add-message", messagesController.addMessage);
 
 // get messages
-router.get("/get-messages/:conversationId", messagesController.getMessages);
+// router.get("/get-messages/:conversationId", messagesController.getMessages);
 
 module.exports = router;

@@ -3,36 +3,26 @@ const User = require("../model/user");
 
 exports.connectionStatus = async (req, res) => {
   const checkIfConnectionExist = await Connection.find({
-    senderId: req.body.userId,
-    receiverId: req.body.friendId,
+    $or: [
+      { senderId: req.body.userId, receiverId: req.body.friendId },
+      { senderId: req.body.friendId, receiverId: req.body.userId },
+    ],
   });
 
-  const checkIfConnectionExistOpposite = await Connection.find({
-    senderId: req.body.friendId,
-    receiverId: req.body.userId,
-  });
-
-  if (!checkIfConnectionExistOpposite[0] && !checkIfConnectionExist[0]) {
+  if (!checkIfConnectionExist[0]) {
     res.status(200).json("no connection");
     return;
   }
 
-  let connectionArray;
-  if (checkIfConnectionExistOpposite[0]) {
-    connectionArray = checkIfConnectionExistOpposite[0];
-  } else {
-    connectionArray = checkIfConnectionExist[0];
-  }
-
-  if (connectionArray.approved) {
+  if (checkIfConnectionExist[0].approved) {
     res.status(200).json("friendhip");
     return;
   }
-  if (connectionArray.senderId === req.body.userId) {
+  if (checkIfConnectionExist[0].senderId === req.body.userId) {
     res.status(200).json("friend request was sent");
     return;
   }
-  if (connectionArray.senderId === req.body.friendId) {
+  if (checkIfConnectionExist[0].senderId === req.body.friendId) {
     res.status(200).json("respond to friend request");
     return;
   }
@@ -42,16 +32,13 @@ exports.connectionStatus = async (req, res) => {
 
 exports.sendConnectionRequest = async (req, res) => {
   const checkIfConnectionExist = await Connection.find({
-    senderId: req.body.senderId,
-    receiverId: req.body.receiverId,
+    $or: [
+      { senderId: req.body.senderId, receiverId: req.body.receiverId },
+      { senderId: req.body.receiverId, receiverId: req.body.senderId },
+    ],
   });
 
-  const checkIfConnectionExistOpposite = await Connection.find({
-    senderId: req.body.receiverId,
-    receiverId: req.body.senderId,
-  });
-
-  if (checkIfConnectionExist[0] || checkIfConnectionExistOpposite[0]) {
+  if (checkIfConnectionExist[0]) {
     res.status(500).json("connection already exist");
   } else {
     const newConnection = new Connection({
@@ -135,7 +122,7 @@ exports.pendingConnections = async (userId) => {
       approved: false,
     });
 
-    var requestsPendingWithUsersData = await Promise.all(
+    const requestsPendingWithUsersData = await Promise.all(
       requestsPending.map(async (item) => {
         const userData = await User.findById(item.senderId);
         return {
