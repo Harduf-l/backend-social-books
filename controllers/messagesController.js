@@ -69,6 +69,7 @@ exports.updateShouldSee = async (req, res) => {
 
     res.status(200).json("all messages are seen");
   } catch (err) {
+    console.log("error here");
     res.status(500).json(err.response);
   }
 };
