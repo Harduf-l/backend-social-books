@@ -20,8 +20,6 @@ exports.newConversation = async (req, res) => {
       match: { _id: { $ne: req.body.senderId } },
     });
 
-    console.log(conversationPopulates);
-
     res.status(200).json(conversationPopulates);
   } catch (err) {
     res.status(500).json(err);
@@ -29,7 +27,6 @@ exports.newConversation = async (req, res) => {
 };
 
 exports.getConversationsOfUser = async (req, res) => {
-  console.log(req.params.userId);
   try {
     const conversations = await Conversation.find({
       members: { $in: [req.params.userId] },
