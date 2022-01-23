@@ -11,48 +11,47 @@ exports.newConversation = async (req, res) => {
 
   try {
     const savedConversation = await newConversationObject.save();
-    res.status(200).json(savedConversation);
+
+    const conversationPopulates = await Conversation.findById(
+      savedConversation._id
+    ).populate({
+      path: "members",
+      select: "username _id picture",
+      match: { _id: { $ne: req.body.senderId } },
+    });
+
+    console.log(conversationPopulates);
+
+    res.status(200).json(conversationPopulates);
   } catch (err) {
     res.status(500).json(err);
   }
 };
 
 exports.getConversationsOfUser = async (req, res) => {
+  console.log(req.params.userId);
   try {
-    const conversations = await Conversation.aggregate([
-      { $match: { members: { $in: [req.params.userId] } } },
-    ]);
+    const conversations = await Conversation.find({
+      members: { $in: [req.params.userId] },
+    }).populate({
+      path: "members",
+      select: "username _id picture",
+      match: { _id: { $ne: req.params.userId } },
+    });
 
     let numberOfUnseenMessages = 0;
+    conversations.forEach((conv) => {
+      if (conv.shouldSee.personId === req.params.userId) {
+        numberOfUnseenMessages++;
+      }
+    });
 
-    const conversationsWithFriendData = await Promise.all(
-      conversations.map(async (item) => {
-        let friendId;
-        if (item.members[0] === req.params.userId) {
-          friendId = item.members[1];
-        } else {
-          friendId = item.members[0];
-        }
-        if (item.shouldSee.personId === req.params.userId) {
-          numberOfUnseenMessages++;
-        }
-        const userData = await User.findById(friendId);
-        return {
-          ...item,
-          pictureOfFriend: userData.picture,
-          nameOfFriend: userData.username,
-          idOfFriend: userData._id,
-        };
-      })
-    );
+    conversations.sort((a, b) => a.updatedAt.getTime() - b.updatedAt.getTime());
 
-    conversationsWithFriendData.sort(
-      (a, b) => a.updatedAt.getTime() - b.updatedAt.getTime()
-    );
-
-    res
-      .status(200)
-      .json({ conversationsWithFriendData, numberOfUnseenMessages });
+    res.status(200).json({
+      conversationsWithFriendData: conversations,
+      numberOfUnseenMessages,
+    });
   } catch (err) {
     console.log(err);
     res.status(500);
