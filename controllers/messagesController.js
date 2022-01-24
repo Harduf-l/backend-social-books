@@ -1,31 +1,6 @@
 const Conversation = require("../model/conversation");
 const User = require("../model/user");
 
-exports.newConversation = async (req, res) => {
-  const newConversationObject = new Conversation({
-    members: [req.body.senderId, req.body.receiverId],
-    messages: [],
-    shouldSee: { personId: "", count: 0 },
-    updatedAt: Date.now(),
-  });
-
-  try {
-    const savedConversation = await newConversationObject.save();
-
-    const conversationPopulates = await Conversation.findById(
-      savedConversation._id
-    ).populate({
-      path: "members",
-      select: "username _id picture",
-      match: { _id: { $ne: req.body.senderId } },
-    });
-
-    res.status(200).json(conversationPopulates);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-};
-
 exports.getConversationsOfUser = async (req, res) => {
   try {
     const conversations = await Conversation.find({
@@ -70,17 +45,6 @@ exports.updateShouldSee = async (req, res) => {
   }
 };
 
-exports.checkIfConversationAlreadyExist = async (req, res) => {
-  try {
-    const conversation = await Conversation.find({
-      members: { $all: [req.params.userId, req.params.friendId] },
-    });
-    res.status(200).json(conversation);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-};
-
 exports.addMessage = async (req, res) => {
   const newMessage = {
     senderId: req.body.senderId,
@@ -88,21 +52,63 @@ exports.addMessage = async (req, res) => {
     text: req.body.text,
     createdAt: Date.now(),
   };
+  if (req.body.createNewConversation) {
+    try {
+      const newConversationData = await newConversation(
+        req.body.senderId,
+        req.body.receiverId,
+        newMessage
+      );
 
-  const filter = { _id: req.body.conversationId };
+      res.status(200).json({
+        message: "conversation created successfully",
+        newConverationCreated: newConversationData,
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  } else {
+    const filter = { _id: req.body.conversationId };
+
+    try {
+      await Conversation.findOneAndUpdate(filter, {
+        $push: { messages: newMessage },
+        $inc: { "shouldSee.count": 1 },
+        $set: {
+          "shouldSee.personId": req.body.receiverId,
+          updatedAt: Date.now(),
+        },
+      });
+
+      res.status(200).json({ message: "message was added" });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  }
+};
+
+const newConversation = async (senderId, receiverId, firstMessage) => {
+  const newConversationObject = new Conversation({
+    members: [senderId, receiverId],
+    messages: [firstMessage],
+    shouldSee: { personId: receiverId, count: 1 },
+    updatedAt: Date.now(),
+  });
 
   try {
-    await Conversation.findOneAndUpdate(filter, {
-      $push: { messages: newMessage },
-      $inc: { "shouldSee.count": 1 },
-      $set: {
-        "shouldSee.personId": req.body.receiverId,
-        updatedAt: Date.now(),
-      },
+    const savedConversation = await newConversationObject.save();
+
+    const conversationPopulates = await Conversation.findById(
+      savedConversation._id
+    ).populate({
+      path: "members",
+      select: "username _id picture",
+      match: { _id: { $ne: senderId } },
     });
 
-    res.status(200).json("message was added");
+    return conversationPopulates;
   } catch (err) {
-    res.status(500).json(err.response);
+    console.log(err);
   }
 };

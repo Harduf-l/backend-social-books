@@ -160,11 +160,17 @@ exports.addUser = async (req, res) => {
       user.genres
     );
 
+    const token = jwt.sign(
+      { id: user._id, email: user.email },
+      process.env.JWT_SECRET
+    );
+
     return res.json({
       status: "ok",
       userDetails: user,
       suggestedUsers,
       recommendationBookArray,
+      token,
     });
   } catch (error) {
     // first, let's remove image from cloudinary
