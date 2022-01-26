@@ -1,36 +1,6 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
 
-exports.getBooksList = (req, res) => {
-  const searchWord = req.query.search;
-  let encodedWord = encodeURI(searchWord);
-  axios
-    .get(
-      `https://api.nli.org.il/openlibrary/search?api_key=uoX9ZMiaRMIBUF4pX0SEuGXMRpUqQIHrw5XuQKcE&query=title,contains,${encodedWord},And;creator,contains,${encodedWord},AND;language,exact,heb&output_format=json&material_type=books`
-    )
-    .then((response) => {
-      const hebrewData = response.data.map((el) => {
-        return {
-          title: el["http://purl.org/dc/elements/1.1/title"]
-            ? el["http://purl.org/dc/elements/1.1/title"][0]["@value"].split(
-                "/"
-              )[0]
-            : "",
-          author: el["http://purl.org/dc/elements/1.1/creator"]
-            ? el["http://purl.org/dc/elements/1.1/creator"][0]["@value"].split(
-                /[,$$Q]/
-              )[0] +
-              el["http://purl.org/dc/elements/1.1/creator"][0]["@value"].split(
-                /[,$$Q]/
-              )[1]
-            : "",
-        };
-      });
-
-      res.json(hebrewData);
-    });
-};
-
 exports.getSingleBookData = (req, res) => {
   const bookId = req.query.bookId;
   axios
@@ -49,7 +19,7 @@ exports.getSingleBookData = (req, res) => {
         }
       }
 
-      let bookDescription = bookArea ? bigDataStr : null;
+      let bookDescription = bookArea ? bigDataStr.trim() : null;
 
       constDetailsArea = $(".when")[0];
 
@@ -102,65 +72,136 @@ exports.getBooksListData = (req, res) => {
     .then((response) => {
       const markup = response.data;
 
-      const $ = cheerio.load(markup);
+      if (response.data.length < 200) {
+        // it means we have only one book
+        // need to get the bookId and scrape in the single book page
+        let bookDetail = markup.split("item_id=")[1].split(`"`)[0];
 
-      const bookList = [];
-      const bookTables = $(".searchResult");
+        axios
+          .get(`https://simania.co.il/bookdetails.php?item_id=${bookDetail}`)
+          .then((data) => {
+            const markup = data.data;
+            const $ = cheerio.load(markup);
+            let bookObj = {};
+            bookObj["bookId"] = bookDetail;
+            bookObj["imgSrc"] = $(".bookImage")[0].attribs["src"];
 
-      bookTables.each(function (idx, el) {
-        let bookObj = {};
-        bookObj["imgSrc"] = $(el)
-          .children("tbody")
-          .children("tr")
-          .children("td")
-          .eq(1)
-          .children("div")
-          .children("div")
-          .children("a")
-          .children("img")
-          .attr("src");
+            bookObj["title"] = constDetailsArea = $(".when")
+              .parent()
+              .children("h2")
+              .eq(0)
+              .text()
+              .trim();
 
-        bookObj["title"] = $(el)
-          .children("tbody")
-          .children("tr")
-          .children("td")
-          .eq(2)
-          .children("div")
-          .children("div")
-          .children("a")
-          .eq(0)
-          .text();
+            bookObj["author"] = constDetailsArea = $(".when")
+              .parent()
+              .children("h3")
+              .eq(0)
+              .text()
+              .trim();
 
-        bookObj["author"] = $(el)
-          .children("tbody")
-          .children("tr")
-          .children("td")
-          .eq(2)
-          .children("div")
-          .children("div")
-          .children("a")
-          .eq(1)
-          .text();
+            let bookList = [];
+            bookList.push(bookObj);
+            res.status(200).json(bookList);
+          })
+          .catch((err) => {
+            res.status(500).json(err);
+          });
+      } else {
+        // scraping list of boooks
+        const $ = cheerio.load(markup);
+        const bookList = [];
+        const bookTables = $(".searchResult");
 
-        bookObj["bookId"] = $(el)
-          .children("tbody")
-          .children("tr")
-          .children("td")
-          .eq(2)
-          .children("div")
-          .children("div")
-          .children("a")
-          .eq(0)
-          .attr("href")
-          .split("=")[1];
+        bookTables.each(function (idx, el) {
+          let bookObj = {};
+          bookObj["imgSrc"] = $(el)
+            .children("tbody")
+            .children("tr")
+            .children("td")
+            .eq(1)
+            .children("div")
+            .children("div")
+            .children("a")
+            .children("img")
+            .attr("src")
+            .trim();
 
-        bookList.push(bookObj);
-      });
+          bookObj["title"] = $(el)
+            .children("tbody")
+            .children("tr")
+            .children("td")
+            .eq(2)
+            .children("div")
+            .children("div")
+            .children("a")
+            .eq(0)
+            .text()
+            .trim();
 
-      res.status(200).json(bookList);
+          bookObj["author"] = $(el)
+            .children("tbody")
+            .children("tr")
+            .children("td")
+            .eq(2)
+            .children("div")
+            .children("div")
+            .children("a")
+            .eq(1)
+            .text()
+            .trim();
+
+          bookObj["bookId"] = $(el)
+            .children("tbody")
+            .children("tr")
+            .children("td")
+            .eq(2)
+            .children("div")
+            .children("div")
+            .children("a")
+            .eq(0)
+            .attr("href")
+            .split("=")[1]
+            .trim();
+
+          bookList.push(bookObj);
+        });
+
+        res.status(200).json(bookList);
+      }
     })
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
 };
+
+// exports.getBooksList = (req, res) => {
+//   const searchWord = req.query.search;
+//   let encodedWord = encodeURI(searchWord);
+//   axios
+//     .get(
+//       `https://api.nli.org.il/openlibrary/search?api_key=uoX9ZMiaRMIBUF4pX0SEuGXMRpUqQIHrw5XuQKcE&query=title,contains,${encodedWord},And;creator,contains,${encodedWord},AND;language,exact,heb&output_format=json&material_type=books`
+//     )
+//     .then((response) => {
+//       const hebrewData = response.data.map((el) => {
+//         return {
+//           title: el["http://purl.org/dc/elements/1.1/title"]
+//             ? el["http://purl.org/dc/elements/1.1/title"][0]["@value"].split(
+//                 "/"
+//               )[0]
+//             : "",
+//           author: el["http://purl.org/dc/elements/1.1/creator"]
+//             ? el["http://purl.org/dc/elements/1.1/creator"][0]["@value"].split(
+//                 /[,$$Q]/
+//               )[0] +
+//               el["http://purl.org/dc/elements/1.1/creator"][0]["@value"].split(
+//                 /[,$$Q]/
+//               )[1]
+//             : "",
+//         };
+//       });
+
+//       res.json(hebrewData);
+//     });
+// };
