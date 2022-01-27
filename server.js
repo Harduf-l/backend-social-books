@@ -29,6 +29,89 @@ app.use("/messages", messagesRouter);
 app.use("/autoComplete", autoCompleteRouter);
 app.use("/connections", connectionRouter);
 
-server = app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log("server is running");
 });
+
+///// socket section ///////////////
+
+const io = require("socket.io")(server, {
+  cors: {
+    origin: "*",
+  },
+});
+
+const usersOnline = {};
+
+io.on("connection", (socket) => {
+  socket.on("disconnect", () => {
+    removeSpecificSocket(socket.id);
+    let objectOfOnlineId = getOnlineObject();
+    io.emit("userDisconnected", objectOfOnlineId);
+  });
+
+  socket.on("addUser", (userId) => {
+    usersOnline[userId] = socket.id;
+
+    let objectOfOnlineId = getOnlineObject();
+    io.emit("onlineArray", objectOfOnlineId);
+  });
+
+  socket.on("messageSend", (message) => {
+    const receiverSocket = getReceiverSocket(message.receiverId);
+    if (receiverSocket) {
+      io.to(receiverSocket).emit("newMessage", message);
+    }
+  });
+
+  socket.on("userIsTyping", (details) => {
+    const receiverSocket = getReceiverSocket(details.receiverId);
+    if (receiverSocket) {
+      io.to(receiverSocket).emit("newTypingEvent", details.convId);
+    }
+  });
+
+  socket.on("friendRequestSend", (friendRequest) => {
+    const receiverSocket = getReceiverSocket(friendRequest.idOfReceiver);
+
+    if (receiverSocket) {
+      io.to(receiverSocket).emit("newFriendRequest", friendRequest);
+    }
+  });
+
+  socket.on("userLogout", (userId) => {
+    delete usersOnline[userId];
+    let objectOfOnlineId = getOnlineObject();
+    io.emit("userDisconnected", objectOfOnlineId);
+  });
+});
+
+const getReceiverSocket = (reveiverId) => {
+  const socketsList = Object.keys(usersOnline);
+
+  for (let i = 0; i < socketsList.length; i++) {
+    if (socketsList[i] === reveiverId) {
+      return usersOnline[socketsList[i]];
+    }
+  }
+  return false;
+};
+
+const removeSpecificSocket = (socketId) => {
+  const socketsList = Object.keys(usersOnline);
+
+  for (let i = 0; i < socketsList.length; i++) {
+    if (usersOnline[socketsList[i]] === socketId) {
+      delete usersOnline[socketsList[i]];
+    }
+  }
+};
+
+const getOnlineObject = () => {
+  const idOnlineArray = Object.keys(usersOnline);
+  let onlineObj = {};
+  idOnlineArray.forEach((id) => {
+    onlineObj[id] = true;
+  });
+  return onlineObj;
+};
