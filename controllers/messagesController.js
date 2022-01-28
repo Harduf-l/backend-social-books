@@ -45,12 +45,30 @@ exports.updateShouldSee = async (req, res) => {
   }
 };
 
+exports.getSingleConversation = async (req, res) => {
+  console.log(req.params.convId);
+
+  try {
+    const foundConversation = await Conversation.findById(
+      req.params.convId
+    ).populate({
+      path: "members",
+      select: "username _id picture",
+      match: { _id: { $ne: req.params.userId } },
+    });
+
+    res.status(200).json({ foundConversation });
+  } catch (err) {
+    res.status(500).json("conversation not found");
+  }
+};
+
 exports.addMessage = async (req, res) => {
   const newMessage = {
     senderId: req.body.senderId,
     receiverId: req.body.receiverId,
     text: req.body.text,
-    createdAt: Date.now(),
+    createdAt: req.body.createdAt,
   };
   if (req.body.createNewConversation) {
     try {

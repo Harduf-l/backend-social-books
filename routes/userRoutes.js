@@ -7,5 +7,6 @@ router.post("/token-check-no-data", userController.tokenCheckNoData);
 router.post("/login", userController.login);
 router.post("/add-user", userController.addUser);
 router.get("/get-by-id/:id", userController.getById);
+router.get("/wake-up", (req, res) => res.status(200).send("server woke up"));
 
 module.exports = router;

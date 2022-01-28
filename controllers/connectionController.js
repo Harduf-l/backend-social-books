@@ -98,12 +98,20 @@ exports.allApprovedConnection = async (req, res) => {
           userDataCheck = item.senderId;
         }
         const userData = await User.findById(userDataCheck);
-        return {
-          connectionId: item._id,
-          picture: userData.picture,
-          username: userData.username,
-          _id: userData._id,
-        };
+
+        if (userData) {
+          // it means the friend exist
+          return {
+            connectionId: item._id,
+            picture: userData.picture,
+            username: userData.username,
+            _id: userData._id,
+          };
+        } else {
+          // it means the friend deleted his account, so in client we shall show only connections
+          // that have friend data in them
+          return { connectionId: item._id };
+        }
       })
     );
 

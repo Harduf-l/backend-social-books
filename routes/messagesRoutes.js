@@ -9,6 +9,11 @@ router.get(
 );
 
 router.get(
+  "/get-single-conversation/:convId/:userId",
+  messagesController.getSingleConversation
+);
+
+router.get(
   "/update-should-see/:conversationId",
   messagesController.updateShouldSee
 );
