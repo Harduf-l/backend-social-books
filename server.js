@@ -57,6 +57,11 @@ io.on("connection", (socket) => {
     io.emit("onlineArray", objectOfOnlineId);
   });
 
+  socket.on("onlineArrayPlease", () => {
+    let objectOfOnlineId = getOnlineObject();
+    io.emit("onlineArray", objectOfOnlineId);
+  });
+
   socket.on("messageSend", (message) => {
     const receiverSocket = getReceiverSocket(message.receiverId);
     if (receiverSocket) {

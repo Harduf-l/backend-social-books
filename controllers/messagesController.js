@@ -46,8 +46,6 @@ exports.updateShouldSee = async (req, res) => {
 };
 
 exports.getSingleConversation = async (req, res) => {
-  console.log(req.params.convId);
-
   try {
     const foundConversation = await Conversation.findById(
       req.params.convId
