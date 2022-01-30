@@ -3,7 +3,10 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 require("dotenv").config();
 const { addUserPhoto, removeUserPhoto } = require("../helpers/cloudinary");
-const { pendingConnections } = require("./connectionController");
+const {
+  pendingConnections,
+  friendsArrayId,
+} = require("./connectionController");
 
 const {
   chooseRandomAmount,
@@ -55,7 +58,18 @@ exports.tokenCheck = async (req, res) => {
         genres: { $in: foundUser.genres },
         email: { $ne: foundUser.email },
       });
-      suggestedUsers = chooseRandomAmount(suggestedUsers, 5);
+
+      ///////////
+      ///need to generate array of user friends id's, so we can filter them from the random friends suggestions
+
+      const arrayOfIds = await friendsArrayId(foundUser._id);
+
+      suggestedUsers = suggestedUsers.filter(
+        (user) => !arrayOfIds.includes(user._id.toString())
+      );
+
+      //////////
+      suggestedUsers = chooseRandomAmount(suggestedUsers, 6);
 
       const recommendationBookArray = await getRecommendedBooksBasedOnGenres(
         foundUser.genres
@@ -100,7 +114,18 @@ exports.login = async (req, res) => {
       email: { $ne: foundUser.email },
     });
 
-    suggestedUsers = chooseRandomAmount(suggestedUsers, 5);
+    ///////////
+    ///need to generate array of user friends id's, so we can filter them from the random friends suggestions
+
+    const arrayOfIds = await friendsArrayId(foundUser._id);
+
+    suggestedUsers = suggestedUsers.filter(
+      (user) => !arrayOfIds.includes(user._id.toString())
+    );
+
+    //////////
+
+    suggestedUsers = chooseRandomAmount(suggestedUsers, 6);
     const recommendationBookArray = await getRecommendedBooksBasedOnGenres(
       foundUser.genres
     );
@@ -154,6 +179,17 @@ exports.addUser = async (req, res) => {
       genres: { $in: user.genres },
       email: { $ne: user.email },
     });
+
+    ///////////
+    ///need to generate array of user friends id's, so we can filter them from the random friends suggestions
+
+    const arrayOfIds = await friendsArrayId(user._id);
+
+    suggestedUsers = suggestedUsers.filter(
+      (user) => !arrayOfIds.includes(user._id.toString())
+    );
+
+    //////////
     suggestedUsers = chooseRandomAmount(suggestedUsers, 5);
 
     const recommendationBookArray = await getRecommendedBooksBasedOnGenres(

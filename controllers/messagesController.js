@@ -69,17 +69,27 @@ exports.addMessage = async (req, res) => {
     createdAt: req.body.createdAt,
   };
   if (req.body.createNewConversation) {
+    /// should first check if we already have a conversation of these two users
+    //
     try {
-      const newConversationData = await newConversation(
-        req.body.senderId,
-        req.body.receiverId,
-        newMessage
-      );
-
-      res.status(200).json({
-        message: "conversation created successfully",
-        newConverationCreated: newConversationData,
+      const conversation = await Conversation.find({
+        members: { $all: [req.params.senderId, req.params.receiverId] },
       });
+
+      if (conversation.length > 0) {
+        res.status(500).json("conversation already exist");
+      } else {
+        const newConversationData = await newConversation(
+          req.body.senderId,
+          req.body.receiverId,
+          newMessage
+        );
+
+        res.status(200).json({
+          message: "conversation created successfully",
+          newConverationCreated: newConversationData,
+        });
+      }
     } catch (err) {
       console.log(err);
       res.status(500).json(err);

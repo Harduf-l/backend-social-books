@@ -123,6 +123,28 @@ exports.allApprovedConnection = async (req, res) => {
   }
 };
 
+exports.friendsArrayId = async (userId) => {
+  try {
+    const requestsApproved = await Connection.find({
+      $or: [
+        { receiverId: userId, approved: true },
+        { senderId: userId, approved: true },
+      ],
+    });
+    let arrayOfFriendId = [];
+    requestsApproved.forEach((connection) => {
+      if (connection.senderId === userId) {
+        arrayOfFriendId.push(connection.receiverId);
+      } else {
+        arrayOfFriendId.push(connection.senderId);
+      }
+    });
+    return arrayOfFriendId;
+  } catch (err) {
+    return err;
+  }
+};
+
 exports.pendingConnections = async (userId) => {
   try {
     const requestsPending = await Connection.find({
