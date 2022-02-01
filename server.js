@@ -4,6 +4,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const userRouter = require("./routes/userRoutes");
 const bookRouter = require("./routes/bookRouter");
+const postsRouter = require("./routes/postRouter");
 const generalRouter = require("./routes/generalRouter");
 const connectionRouter = require("./routes/connectionsRouter");
 const messagesRouter = require("./routes/messagesRoutes");
@@ -26,6 +27,7 @@ connection.once("open", () => {
 
 app.use("/users", userRouter);
 app.use("/books", bookRouter);
+app.use("/posts", postsRouter);
 app.use("/messages", messagesRouter);
 app.use("/autoComplete", autoCompleteRouter);
 app.use("/connections", connectionRouter);
