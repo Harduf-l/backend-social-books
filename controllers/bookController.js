@@ -90,15 +90,13 @@ exports.getBooksListData = (req, res) => {
               .parent()
               .children("h2")
               .eq(0)
-              .text()
-              .trim();
+              .text();
 
             bookObj["author"] = constDetailsArea = $(".when")
               .parent()
               .children("h3")
               .eq(0)
-              .text()
-              .trim();
+              .text();
 
             let bookList = [];
             bookList.push(bookObj);
@@ -124,8 +122,7 @@ exports.getBooksListData = (req, res) => {
             .children("div")
             .children("a")
             .children("img")
-            .attr("src")
-            .trim();
+            .attr("src");
 
           bookObj["title"] = $(el)
             .children("tbody")
@@ -136,8 +133,7 @@ exports.getBooksListData = (req, res) => {
             .children("div")
             .children("a")
             .eq(0)
-            .text()
-            .trim();
+            .text();
 
           bookObj["author"] = $(el)
             .children("tbody")
@@ -148,8 +144,7 @@ exports.getBooksListData = (req, res) => {
             .children("div")
             .children("a")
             .eq(1)
-            .text()
-            .trim();
+            .text();
 
           bookObj["bookId"] = $(el)
             .children("tbody")
@@ -161,8 +156,7 @@ exports.getBooksListData = (req, res) => {
             .children("a")
             .eq(0)
             .attr("href")
-            .split("=")[1]
-            .trim();
+            .split("=")[1];
 
           bookList.push(bookObj);
         });

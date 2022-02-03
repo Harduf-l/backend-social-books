@@ -190,7 +190,7 @@ exports.addUser = async (req, res) => {
     );
 
     //////////
-    suggestedUsers = chooseRandomAmount(suggestedUsers, 5);
+    suggestedUsers = chooseRandomAmount(suggestedUsers, 6);
 
     const recommendationBookArray = await getRecommendedBooksBasedOnGenres(
       user.genres
