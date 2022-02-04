@@ -89,6 +89,7 @@ exports.addPostComment = async (req, res) => {
 
   try {
     let postToAddComment = await Post.findById(req.body.postId);
+
     postToAddComment.comments.push(newComment);
     const newPostWithComments = await postToAddComment.save();
 
@@ -106,7 +107,7 @@ exports.addPostComment = async (req, res) => {
         select: "username _id picture",
       })
       .populate({
-        path: "comments.miniComments.miniCommentResponder",
+        path: "comments.miniComments.commentResponder",
         select: "username _id picture",
       });
 
