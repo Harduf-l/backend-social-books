@@ -1,12 +1,13 @@
 const mongoose = require("mongoose");
 
 const miniCommentSchema = new mongoose.Schema({
-  miniCommentContent: { type: String },
-  miniCommentResponder: {
+  commentContent: { type: String },
+  commentResponder: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "UserSchema",
   },
   likes: [{ type: mongoose.Schema.Types.ObjectId, ref: "UserSchema" }],
+  createdAt: { type: Date },
 });
 
 const commentSchema = new mongoose.Schema({
@@ -14,6 +15,7 @@ const commentSchema = new mongoose.Schema({
   commentResponder: { type: mongoose.Schema.Types.ObjectId, ref: "UserSchema" },
   miniComments: [miniCommentSchema],
   likes: [{ type: mongoose.Schema.Types.ObjectId, ref: "UserSchema" }],
+  createdAt: { type: Date },
 });
 
 const PostSchema = new mongoose.Schema(

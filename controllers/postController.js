@@ -84,6 +84,7 @@ exports.addPostComment = async (req, res) => {
     commentContent: req.body.content,
     commentResponder: req.body.responderId,
     likes: [],
+    createdAt: Date.now(),
   };
 
   try {
@@ -131,7 +132,7 @@ exports.getAllPosts = async (req, res) => {
         select: "username _id picture",
       })
       .populate({
-        path: "comments.miniComments.miniCommentResponder",
+        path: "comments.miniComments.commentResponder",
         select: "username _id picture",
       });
 
