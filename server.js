@@ -6,9 +6,11 @@ const userRouter = require("./routes/userRoutes");
 const bookRouter = require("./routes/bookRouter");
 const postsRouter = require("./routes/postRouter");
 const generalRouter = require("./routes/generalRouter");
+const adminRouter = require("./routes/adminRouter");
 const connectionRouter = require("./routes/connectionsRouter");
 const messagesRouter = require("./routes/messagesRoutes");
 const autoCompleteRouter = require("./routes/autoCompleteRouter");
+const { verifyAdminTokenMiddleWare } = require("./controllers/adminController");
 const app = express();
 const PORT = process.env.PORT || 5005;
 
@@ -31,6 +33,7 @@ app.use("/posts", postsRouter);
 app.use("/messages", messagesRouter);
 app.use("/autoComplete", autoCompleteRouter);
 app.use("/connections", connectionRouter);
+app.use("/admin", verifyAdminTokenMiddleWare, adminRouter);
 app.use("/general", generalRouter);
 const server = app.listen(PORT, () => {
   console.log("server is running");
