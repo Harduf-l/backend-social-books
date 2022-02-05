@@ -10,14 +10,14 @@ exports.getData = (req, res) => {
     } else {
       let parsedData = JSON.parse(data);
 
-      parsedData.push({ name: "ari", age: 20 });
+      parsedData.push({ randomNumber: Math.random() * 100 });
 
       fs.writeFile(
         "./data/names.json",
         JSON.stringify(parsedData),
         function (err) {
           if (err) throw err;
-          console.log('The "data to append" was appended to file!');
+          console.log("The data was appended to file!");
         }
       );
     }
