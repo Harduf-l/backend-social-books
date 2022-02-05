@@ -6,7 +6,6 @@ const miniCommentSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "UserSchema",
   },
-  likes: [{ type: mongoose.Schema.Types.ObjectId, ref: "UserSchema" }],
   createdAt: { type: Date },
 });
 
@@ -14,7 +13,6 @@ const commentSchema = new mongoose.Schema({
   commentContent: { type: String },
   commentResponder: { type: mongoose.Schema.Types.ObjectId, ref: "UserSchema" },
   miniComments: [miniCommentSchema],
-  likes: [{ type: mongoose.Schema.Types.ObjectId, ref: "UserSchema" }],
   createdAt: { type: Date },
 });
 

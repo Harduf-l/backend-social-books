@@ -27,7 +27,7 @@ exports.addPost = async (req, res) => {
         select: "username _id picture",
       })
       .populate({
-        path: "comments.miniComments.miniCommentResponder",
+        path: "comments.miniComments.commentResponder",
         select: "username _id picture",
       });
 
@@ -83,16 +83,27 @@ exports.addPostComment = async (req, res) => {
   let newComment = {
     commentContent: req.body.content,
     commentResponder: req.body.responderId,
-    likes: [],
     createdAt: Date.now(),
   };
 
   try {
     let postToAddComment = await Post.findById(req.body.postId);
 
-    postToAddComment.comments.push(newComment);
+    /// checking if it's mini comment or regular comment, inserting to database accordingly ///
+    if (req.body.commentId) {
+      let commentIndex = postToAddComment.comments.findIndex(
+        (el) => el._id.toString() === req.body.commentId.toString()
+      );
+      if (commentIndex !== -1) {
+        postToAddComment.comments[commentIndex].miniComments.unshift(
+          newComment
+        );
+      }
+    } else {
+      postToAddComment.comments.push(newComment);
+    }
+    /////
     const newPostWithComments = await postToAddComment.save();
-
     const populatedPost = await Post.findById(newPostWithComments._id)
       .populate({
         path: "postWriter",
@@ -113,6 +124,7 @@ exports.addPostComment = async (req, res) => {
 
     res.status(200).json(populatedPost);
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 };
