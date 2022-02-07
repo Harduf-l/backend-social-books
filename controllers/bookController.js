@@ -1,174 +1,174 @@
-const axios = require("axios");
-const cheerio = require("cheerio");
+// const axios = require("axios");
+// const cheerio = require("cheerio");
 
-exports.getSingleBookData = (req, res) => {
-  const bookId = req.query.bookId;
-  axios
-    .get(`https://simania.co.il/bookdetails.php?item_id=${bookId}`)
-    .then((response) => {
-      const markup = response.data;
-      const $ = cheerio.load(markup);
+// exports.getSingleBookData = (req, res) => {
+//   const bookId = req.query.bookId;
+//   axios
+//     .get(`https://simania.co.il/bookdetails.php?item_id=${bookId}`)
+//     .then((response) => {
+//       const markup = response.data;
+//       const $ = cheerio.load(markup);
 
-      const bookArea = $(".description")[0];
-      bookAreaChildren = bookArea.children;
-      let bigDataStr = "";
+//       const bookArea = $(".description")[0];
+//       bookAreaChildren = bookArea.children;
+//       let bigDataStr = "";
 
-      for (let i = 0; i < bookAreaChildren.length; i++) {
-        if (bookAreaChildren[i].data) {
-          bigDataStr += bookAreaChildren[i].data + " ";
-        }
-      }
+//       for (let i = 0; i < bookAreaChildren.length; i++) {
+//         if (bookAreaChildren[i].data) {
+//           bigDataStr += bookAreaChildren[i].data + " ";
+//         }
+//       }
 
-      let bookDescription = bookArea ? bigDataStr.trim() : null;
+//       let bookDescription = bookArea ? bigDataStr.trim() : null;
 
-      constDetailsArea = $(".when")[0];
+//       constDetailsArea = $(".when")[0];
 
-      let printedBy = null;
-      let yearReleased = null;
-      let pagesInBook = null;
-      if (constDetailsArea) {
-        printedBy =
-          constDetailsArea.children[1] &&
-          constDetailsArea.children[1].children[0].data;
-        yearReleased =
-          constDetailsArea.children[3] &&
-          constDetailsArea.children[3].children[0].data;
-        pagesInBook =
-          constDetailsArea.children[5] &&
-          constDetailsArea.children[5].children[0].data;
-      }
+//       let printedBy = null;
+//       let yearReleased = null;
+//       let pagesInBook = null;
+//       if (constDetailsArea) {
+//         printedBy =
+//           constDetailsArea.children[1] &&
+//           constDetailsArea.children[1].children[0].data;
+//         yearReleased =
+//           constDetailsArea.children[3] &&
+//           constDetailsArea.children[3].children[0].data;
+//         pagesInBook =
+//           constDetailsArea.children[5] &&
+//           constDetailsArea.children[5].children[0].data;
+//       }
 
-      pagesInBook = +pagesInBook;
-      yearReleased = +yearReleased;
+//       pagesInBook = +pagesInBook;
+//       yearReleased = +yearReleased;
 
-      if (yearReleased && yearReleased < 1600) {
-        pagesInBook = yearReleased;
-        yearReleased = null;
-      }
+//       if (yearReleased && yearReleased < 1600) {
+//         pagesInBook = yearReleased;
+//         yearReleased = null;
+//       }
 
-      if (pagesInBook && pagesInBook > 1600) {
-        yearReleased = pagesInBook;
-        pagesInBook = null;
-      }
+//       if (pagesInBook && pagesInBook > 1600) {
+//         yearReleased = pagesInBook;
+//         pagesInBook = null;
+//       }
 
-      res
-        .status(200)
-        .json({ bookDescription, printedBy, yearReleased, pagesInBook });
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-};
+//       res
+//         .status(200)
+//         .json({ bookDescription, printedBy, yearReleased, pagesInBook });
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// };
 
-exports.getBooksListData = (req, res) => {
-  const searchWord = req.query.search;
-  let encodedWord = encodeURI(searchWord);
+// exports.getBooksListData = (req, res) => {
+//   const searchWord = req.query.search;
+//   let encodedWord = encodeURI(searchWord);
 
-  axios
-    .get(
-      `https://simania.co.il/searchBooks.php?searchType=tabAll&query=${encodedWord}`
-    )
-    .then((response) => {
-      const markup = response.data;
+//   axios
+//     .get(
+//       `https://simania.co.il/searchBooks.php?searchType=tabAll&query=${encodedWord}`
+//     )
+//     .then((response) => {
+//       const markup = response.data;
 
-      if (response.data.length < 200) {
-        // it means we have only one book
-        // need to get the bookId and scrape in the single book page
-        let bookDetail = markup.split("item_id=")[1].split(`"`)[0];
+//       if (response.data.length < 200) {
+//         // it means we have only one book
+//         // need to get the bookId and scrape in the single book page
+//         let bookDetail = markup.split("item_id=")[1].split(`"`)[0];
 
-        axios
-          .get(`https://simania.co.il/bookdetails.php?item_id=${bookDetail}`)
-          .then((data) => {
-            const markup = data.data;
-            const $ = cheerio.load(markup);
-            let bookObj = {};
-            bookObj["bookId"] = bookDetail;
-            bookObj["imgSrc"] = $(".bookImage")[0].attribs["src"];
+//         axios
+//           .get(`https://simania.co.il/bookdetails.php?item_id=${bookDetail}`)
+//           .then((data) => {
+//             const markup = data.data;
+//             const $ = cheerio.load(markup);
+//             let bookObj = {};
+//             bookObj["bookId"] = bookDetail;
+//             bookObj["imgSrc"] = $(".bookImage")[0].attribs["src"];
 
-            bookObj["title"] = constDetailsArea = $(".when")
-              .parent()
-              .children("h2")
-              .eq(0)
-              .text();
+//             bookObj["title"] = constDetailsArea = $(".when")
+//               .parent()
+//               .children("h2")
+//               .eq(0)
+//               .text();
 
-            bookObj["author"] = constDetailsArea = $(".when")
-              .parent()
-              .children("h3")
-              .eq(0)
-              .text();
+//             bookObj["author"] = constDetailsArea = $(".when")
+//               .parent()
+//               .children("h3")
+//               .eq(0)
+//               .text();
 
-            let bookList = [];
-            bookList.push(bookObj);
-            res.status(200).json(bookList);
-          })
-          .catch((err) => {
-            res.status(500).json(err);
-          });
-      } else {
-        // scraping list of boooks
-        const $ = cheerio.load(markup);
-        const bookList = [];
-        const bookTables = $(".searchResult");
+//             let bookList = [];
+//             bookList.push(bookObj);
+//             res.status(200).json(bookList);
+//           })
+//           .catch((err) => {
+//             res.status(500).json(err);
+//           });
+//       } else {
+//         // scraping list of boooks
+//         const $ = cheerio.load(markup);
+//         const bookList = [];
+//         const bookTables = $(".searchResult");
 
-        bookTables.each(function (idx, el) {
-          let bookObj = {};
-          bookObj["imgSrc"] = $(el)
-            .children("tbody")
-            .children("tr")
-            .children("td")
-            .eq(1)
-            .children("div")
-            .children("div")
-            .children("a")
-            .children("img")
-            .attr("src");
+//         bookTables.each(function (idx, el) {
+//           let bookObj = {};
+//           bookObj["imgSrc"] = $(el)
+//             .children("tbody")
+//             .children("tr")
+//             .children("td")
+//             .eq(1)
+//             .children("div")
+//             .children("div")
+//             .children("a")
+//             .children("img")
+//             .attr("src");
 
-          bookObj["title"] = $(el)
-            .children("tbody")
-            .children("tr")
-            .children("td")
-            .eq(2)
-            .children("div")
-            .children("div")
-            .children("a")
-            .eq(0)
-            .text();
+//           bookObj["title"] = $(el)
+//             .children("tbody")
+//             .children("tr")
+//             .children("td")
+//             .eq(2)
+//             .children("div")
+//             .children("div")
+//             .children("a")
+//             .eq(0)
+//             .text();
 
-          bookObj["author"] = $(el)
-            .children("tbody")
-            .children("tr")
-            .children("td")
-            .eq(2)
-            .children("div")
-            .children("div")
-            .children("a")
-            .eq(1)
-            .text();
+//           bookObj["author"] = $(el)
+//             .children("tbody")
+//             .children("tr")
+//             .children("td")
+//             .eq(2)
+//             .children("div")
+//             .children("div")
+//             .children("a")
+//             .eq(1)
+//             .text();
 
-          bookObj["bookId"] = $(el)
-            .children("tbody")
-            .children("tr")
-            .children("td")
-            .eq(2)
-            .children("div")
-            .children("div")
-            .children("a")
-            .eq(0)
-            .attr("href")
-            .split("=")[1];
+//           bookObj["bookId"] = $(el)
+//             .children("tbody")
+//             .children("tr")
+//             .children("td")
+//             .eq(2)
+//             .children("div")
+//             .children("div")
+//             .children("a")
+//             .eq(0)
+//             .attr("href")
+//             .split("=")[1];
 
-          bookList.push(bookObj);
-        });
+//           bookList.push(bookObj);
+//         });
 
-        res.status(200).json(bookList);
-      }
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-};
+//         res.status(200).json(bookList);
+//       }
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// };
 
 // exports.getBooksList = (req, res) => {
 //   const searchWord = req.query.search;

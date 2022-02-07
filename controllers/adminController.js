@@ -4,25 +4,6 @@ const fs = require("fs");
 const { pseudoRandomBytes } = require("crypto");
 
 exports.getData = (req, res) => {
-  fs.readFile("./data/names.json", "utf8", (err, data) => {
-    if (err) {
-      console.log(err);
-    } else {
-      let parsedData = JSON.parse(data);
-
-      parsedData.push({ randomNumber: Math.random() * 100 });
-
-      fs.writeFile(
-        "./data/names.json",
-        JSON.stringify(parsedData),
-        function (err) {
-          if (err) throw err;
-          console.log("The data was appended to file!");
-        }
-      );
-    }
-  });
-
   res.status(200).json("passed middleware");
 };
 
