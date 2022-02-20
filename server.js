@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const userRouter = require("./routes/userRoutes");
 const bookRouter = require("./routes/bookRouter");
 const postsRouter = require("./routes/postRouter");
+const groupsRouter = require("./routes/groupsRouter");
 const generalRouter = require("./routes/generalRouter");
 const adminRouter = require("./routes/adminRouter");
 const connectionRouter = require("./routes/connectionsRouter");
@@ -33,6 +34,7 @@ app.use("/posts", postsRouter);
 app.use("/messages", messagesRouter);
 app.use("/autoComplete", autoCompleteRouter);
 app.use("/connections", connectionRouter);
+app.use("/groups", groupsRouter);
 app.use("/admin", verifyAdminTokenMiddleWare, adminRouter);
 app.use("/general", generalRouter);
 const server = app.listen(PORT, () => {
