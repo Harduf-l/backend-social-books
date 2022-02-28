@@ -13,6 +13,8 @@ const {
   getRecommendedBooksBasedOnGenres,
 } = require("../utils");
 
+const { sendWelcomeMessage } = require("./messagesController");
+
 exports.getById = async (req, res) => {
   const { id } = req.params;
   try {
@@ -201,12 +203,15 @@ exports.addUser = async (req, res) => {
       process.env.JWT_SECRET
     );
 
+    const welcomeMessage = await sendWelcomeMessage(user);
+
     return res.json({
       status: "ok",
       userDetails: user,
       suggestedUsers,
       recommendationBookArray,
       token,
+      welcomeMessage,
     });
   } catch (error) {
     // first, let's remove image from cloudinary

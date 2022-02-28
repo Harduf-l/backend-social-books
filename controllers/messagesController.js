@@ -40,7 +40,6 @@ exports.updateShouldSee = async (req, res) => {
 
     res.status(200).json("all messages are seen");
   } catch (err) {
-    console.log("error here");
     res.status(500).json(err.response);
   }
 };
@@ -136,5 +135,37 @@ const newConversation = async (senderId, receiverId, firstMessage) => {
     return conversationPopulates;
   } catch (err) {
     console.log(err);
+  }
+};
+
+exports.sendWelcomeMessage = async (user) => {
+  let charCode = user.username.charCodeAt(0);
+  let welcomeMessageFromManager = "";
+
+  if (charCode >= 1488 && charCode <= 1514) {
+    welcomeMessageFromManager = `היי ${user.username}, תודה שהצטרפת לרשת החברתית בוק מי. האתר עדיין בשלבי פיתוח. יש לך מחשבות/הצעות/הערות? אשמח לשמוע.`;
+  } else {
+    welcomeMessageFromManager = `Hello ${user.username}, thank you for joining BookMe. Feel free to explore around. Any ideas/thoughts? I would like to hear from you. `;
+  }
+  let managerId = "61e7335dc00e9cdd62134b02";
+
+  const newMessage = {
+    senderId: managerId,
+    receiverId: user._id,
+    text: welcomeMessageFromManager,
+    createdAt: Date.now(),
+  };
+
+  try {
+    let populatedMessage = await newConversation(
+      managerId,
+      user._id,
+      newMessage
+    );
+
+    return populatedMessage;
+  } catch (err) {
+    console.log(err);
+    return [];
   }
 };
