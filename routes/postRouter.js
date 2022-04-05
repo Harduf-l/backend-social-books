@@ -1,7 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const postController = require("../controllers/postController");
+const { verifyUserIsWhoHeSays } = require("../helpers/verification");
 
+router.post("/edit-post", verifyUserIsWhoHeSays, postController.editPost);
 router.post("/add-post", postController.addPost);
 router.get("/get-all-posts", postController.getAllPosts);
 router.get(

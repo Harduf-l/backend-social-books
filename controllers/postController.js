@@ -1,5 +1,20 @@
 const Post = require("../model/post");
 
+exports.editPost = async (req, res) => {
+  const postId = req.body.postId;
+  const newPostContent = req.body.newPostContent;
+
+  try {
+    let foundPost = await Post.findById(postId);
+    foundPost.postContent = newPostContent;
+    foundPost.save();
+    res.status(200).send(foundPost);
+  } catch (err) {
+    console.log(err);
+    res.status(500).send(err);
+  }
+};
+
 exports.getSearchedPosts = async (req, res) => {
   const searchedWord = req.params.searchedWord;
 
