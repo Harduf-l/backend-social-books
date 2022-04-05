@@ -1,5 +1,34 @@
 const Post = require("../model/post");
 
+exports.getSearchedPosts = async (req, res) => {
+  const searchedWord = req.params.searchedWord;
+
+  try {
+    const foundPosts = await Post.find({
+      postContent: { $regex: searchedWord, $options: "i" },
+    })
+      .populate({
+        path: "postWriter",
+        select: "username _id picture",
+      })
+      .populate({
+        path: "likes",
+        select: "username _id picture",
+      })
+      .populate({
+        path: "comments.commentResponder",
+        select: "username _id picture",
+      })
+      .populate({
+        path: "comments.miniComments.commentResponder",
+        select: "username _id picture",
+      });
+    res.status(200).send(foundPosts);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+};
+
 exports.addPost = async (req, res) => {
   const post = {
     postWriter: req.body.postWriter,
