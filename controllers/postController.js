@@ -1,5 +1,16 @@
 const Post = require("../model/post");
 
+exports.deletePost = async (req, res) => {
+  const { postId } = req.body;
+
+  try {
+    await Post.findByIdAndDelete(postId);
+    res.status(200).send("post was deleted successfully");
+  } catch (err) {
+    res.status(500).send(err);
+  }
+};
+
 exports.editPost = async (req, res) => {
   const postId = req.body.postId;
   const newPostContent = req.body.newPostContent;

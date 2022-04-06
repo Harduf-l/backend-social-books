@@ -4,6 +4,7 @@ const jwt = require("jsonwebtoken");
 exports.verifyUserIsWhoHeSays = async (req, res, next) => {
   const { token } = req.body;
   const { postId } = req.body;
+
   if (token) {
     try {
       const userToken = jwt.verify(token, process.env.JWT_SECRET);
