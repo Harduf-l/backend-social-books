@@ -229,3 +229,27 @@ exports.addUser = async (req, res) => {
     return res.status(500).json({ error: error.message });
   }
 };
+
+exports.updateUserPhoto = async (req, res) => {
+  try {
+    let imageResponse;
+
+    imageResponse = await addUserPhoto(req.body.imgValue);
+
+    console.log("img response is .... ", imageResponse);
+
+    await User.findOneAndUpdate(
+      { email: req.body.userEmail },
+      { picture: imageResponse ? imageResponse.url : null }
+    );
+
+    // if (req.body.formerPicture) {
+    //   await removeUserPhoto(req.body.formerPicture);
+    // }
+
+    res.status(200).json("image updated successfully server side");
+  } catch (err) {
+    console.log("error in update user photo function", err);
+    res.status(500).json(err);
+  }
+};
