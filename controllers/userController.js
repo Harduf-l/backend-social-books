@@ -253,3 +253,21 @@ exports.updateUserPhoto = async (req, res) => {
     res.status(500).json(err);
   }
 };
+
+exports.updateUserBasicDetails = async (req, res) => {
+  const { email, city, favoriteWriter, genres } = req.body.userDataObject;
+  try {
+    await User.findOneAndUpdate(
+      { email },
+      {
+        city,
+        favoriteWriter,
+        genres,
+      }
+    );
+    res.status(200).json("details were updated successfully");
+  } catch (err) {
+    console.log("error occured...", err);
+    res.status(500).json(err);
+  }
+};
