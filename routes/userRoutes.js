@@ -11,6 +11,9 @@ router.post(
   "/update-user-basic-details",
   userController.updateUserBasicDetails
 );
+
+router.post("/test-cloudinary", userController.testCloudinary);
+
 router.get("/get-by-id/:id", userController.getById);
 router.get("/wake-up", (req, res) => res.status(200).send("server woke up"));
 

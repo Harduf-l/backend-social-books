@@ -11,6 +11,20 @@ exports.removeUserPhoto = async (fileId) => {
   await cloudinary.uploader.destroy(fileId);
 };
 
+exports.addBookPhoto = async (fileStr) => {
+  try {
+    const uploadedResponse = await cloudinary.uploader.upload(fileStr, {
+      crop: "fill",
+      width: 300,
+      height: 400,
+    });
+
+    return uploadedResponse;
+  } catch (err) {
+    return err;
+  }
+};
+
 exports.addUserPhoto = async (fileStr) => {
   try {
     const uploadedResponse = await cloudinary.uploader.upload(fileStr, {

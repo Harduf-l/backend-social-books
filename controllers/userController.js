@@ -1,12 +1,19 @@
+const fs = require("fs");
 const User = require("../model/user");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 require("dotenv").config();
-const { addUserPhoto, removeUserPhoto } = require("../helpers/cloudinary");
+const {
+  addUserPhoto,
+  removeUserPhoto,
+  addBookPhoto,
+} = require("../helpers/cloudinary");
 const {
   pendingConnections,
   friendsArrayId,
 } = require("./connectionController");
+const { novalsRecommendations } = require("../data/genresRecommendation");
+const allGenres = require("../data/genresRecommendation");
 
 const {
   chooseRandomAmount,
@@ -14,6 +21,88 @@ const {
 } = require("../utils");
 
 const { sendWelcomeMessage } = require("./messagesController");
+
+//// helpers ////
+
+const getLastTen = async (userEmail) => {
+  try {
+    const lastTen = await User.find().sort({ _id: -1 }).limit(11);
+
+    const lastTenFiltered = lastTen
+      .filter((randomUser) => randomUser.email !== userEmail)
+      .slice(0, 10);
+
+    console.log(lastTenFiltered);
+
+    return lastTenFiltered;
+  } catch (err) {
+    console.log("didnt work function ", err);
+    return [];
+  }
+};
+//////
+
+exports.testCloudinary = async (req, res) => {
+  const psychologyRecommendations = await Promise.all(
+    allGenres.psychologyRecommendations.map(async (unitBook) => {
+      const photoString = await addBookPhoto(
+        `https://s3-eu-west-1.amazonaws.com/simania-public-assets${unitBook.imgSrc}`
+      );
+
+      return {
+        title: unitBook.title,
+        author: unitBook.author,
+        imgSrc: photoString.url,
+      };
+    })
+  );
+
+  const philosophyRecommendations = await Promise.all(
+    allGenres.philosophyRecommendations.map(async (unitBook) => {
+      const photoString = await addBookPhoto(
+        `https://s3-eu-west-1.amazonaws.com/simania-public-assets${unitBook.imgSrc}`
+      );
+
+      return {
+        title: unitBook.title,
+        author: unitBook.author,
+        imgSrc: photoString.url,
+      };
+    })
+  );
+
+  const managementRecommendations = await Promise.all(
+    allGenres.managementRecommendations.map(async (unitBook) => {
+      const photoString = await addBookPhoto(
+        `https://s3-eu-west-1.amazonaws.com/simania-public-assets${unitBook.imgSrc}`
+      );
+
+      return {
+        title: unitBook.title,
+        author: unitBook.author,
+        imgSrc: photoString.url,
+      };
+    })
+  );
+
+  ///
+  //////
+
+  const arraybooki = {
+    managementRecommendations,
+    philosophyRecommendations,
+    psychologyRecommendations,
+  };
+
+  let jsonBooki = JSON.stringify(arraybooki);
+  fs.writeFile("recommendationBooksJson.json", jsonBooki, (err) => {
+    if (err) {
+      console.log("err is....... ", err);
+    } else {
+      console.log("file created successfully");
+    }
+  });
+};
 
 exports.getById = async (req, res) => {
   const { id } = req.params;
@@ -78,6 +167,7 @@ exports.tokenCheck = async (req, res) => {
       );
 
       const myPendingConnections = await pendingConnections(foundUser._id);
+      const lastTenUsersRegistered = await getLastTen(foundUser.email);
 
       res.json({
         status: "ok",
@@ -85,6 +175,7 @@ exports.tokenCheck = async (req, res) => {
         suggestedUsers,
         recommendationBookArray,
         myPendingConnections,
+        lastTenUsersRegistered,
       });
     } catch {
       res.json({ status: "error", error: "access blocked" });
@@ -116,6 +207,8 @@ exports.login = async (req, res) => {
       email: { $ne: foundUser.email },
     });
 
+    const lastTenUsersRegistered = await getLastTen(foundUser.email);
+
     ///////////
     ///need to generate array of user friends id's, so we can filter them from the random friends suggestions
 
@@ -141,6 +234,7 @@ exports.login = async (req, res) => {
       suggestedUsers,
       recommendationBookArray,
       myPendingConnections,
+      lastTenUsersRegistered,
     });
   } else {
     return res.json({ status: "error", error: "invalid username/password" });
@@ -205,6 +299,8 @@ exports.addUser = async (req, res) => {
 
     const welcomeMessage = await sendWelcomeMessage(user);
 
+    const lastTenUsersRegistered = await getLastTen(user.email);
+
     return res.json({
       status: "ok",
       userDetails: user,
@@ -212,6 +308,7 @@ exports.addUser = async (req, res) => {
       recommendationBookArray,
       token,
       welcomeMessage,
+      lastTenUsersRegistered,
     });
   } catch (error) {
     // first, let's remove image from cloudinary

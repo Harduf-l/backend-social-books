@@ -1,1883 +1,1872 @@
 exports.novalsRecommendations = [
   {
-    imgSrc: "/bookimages/covers4/44355.jpg",
     title: "הברוקר",
     author: "ג'ון גרישם",
-    bookId: "44355",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699192870/b6l2rkdfvw7hutegjvqe.jpg",
   },
   {
-    imgSrc: "/bookimages/covers21/216565.jpg",
     title: "הבלדרית - גבריאל אלון #06",
     author: "דניאל סילבה",
-    bookId: "216565",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699192870/ci5tovlgcx3mirlk1yxz.jpg",
   },
   {
-    imgSrc: "/bookimages/covers95/955847.jpg",
     title: "סטונר",
     author: "ג'ון ויליאמס",
-    bookId: "955847",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699192870/lnqfjnymfzsr1x6dkzyu.jpg",
   },
   {
-    imgSrc: "/bookimages/covers21/214720.jpg",
     title: "לנשק את פי הבתולה",
     author: "דונה מ` גרשטן",
-    bookId: "214720",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699192870/iifbjdku6shnwxjwvwd0.jpg",
   },
   {
-    imgSrc: "/bookimages/covers1/11059.jpg",
     title: "והיום איננו כלה - ספריה לעם #408",
     author: "צ'ינגיס אייטמטוב",
-    bookId: "11059",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699192870/ldw4wxa7ykpzg5d1kzmf.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/938960.jpg",
     title: "הבת האפלה - הספריה החדשה #",
     author: "אלנה פרנטה",
-    bookId: "938960",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699192870/ru4o0n3ce3duqcdt13yd.jpg",
   },
   {
-    imgSrc: "/bookimages/covers12/129588.jpg",
     title: "על העיוורון",
     author: "ז'וזה סאראמאגו",
-    bookId: "129588",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699192870/lwqjq69nhz2hlkj7qtfx.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/4390.jpg",
     title: "העין הכי כחולה - הספריה החדשה #",
     author: "טוני מוריסון",
-    bookId: "4390",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699192870/ag1q3q7gvdwxlpknya3d.jpg",
   },
   {
-    imgSrc: "/bookimages/covers1/10902.jpg",
     title: "אני כריסטיאנה פ. - סיפורה המהמם של נרקומנית בת 13",
     author: "קאי הרמן",
-    bookId: "10902",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699192870/o0zao0o8f9zyyyt4anas.jpg",
   },
   {
-    imgSrc: "/bookimages/covers21/219286.jpg",
     title: "גאווה ודעה קדומה - תרגום ואחרית דבר: עירית לינור",
     author: "ג'יין אוסטן",
-    bookId: "219286",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699192870/aantkspedybpnv2csqsk.jpg",
   },
   {
-    imgSrc: "/bookimages/covers68/689295.jpg",
     title: "הדרך לגן עדן",
     author: "פאולינה סיימונס",
-    bookId: "689295",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699192870/ewexpmp0rquov8bryujq.jpg",
   },
   {
-    imgSrc: "/bookimages/covers21/214646.jpg",
     title: "היונה שעל הגג",
     author: "פרנץ קפקא",
-    bookId: "214646",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699192870/o2hzixys2j1sg7bij6gw.jpg",
   },
   {
-    imgSrc: "/bookimages/covers56/562020.jpg",
     title: "הטיגריס הלבן",
     author: "ארווינד אדיגה",
-    bookId: "562020",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699192870/lo6o0jac6rbya889rf7s.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/937968.jpg",
     title: "אני, קלאודיוס ",
     author: "רוברט גרייבס",
-    bookId: "937968",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699192871/us5tir1gccwlc8hclot4.jpg",
   },
   {
-    imgSrc: "/bookimages/covers68/688706.jpg",
     title: "המנודים",
     author: "סיידי ג'ונס",
-    bookId: "688706",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699192870/nelzcmtmmznwzi3tyhqy.jpg",
   },
   {
-    imgSrc: "/bookimages/covers68/689292.jpg",
     title: "אהבה מטרידה",
     author: "אלנה פרנטה",
-    bookId: "689292",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699192870/gllgumcdhmwau6kzfp9a.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/1728.jpg",
     title: "הזאהיר",
     author: "פאולו קואלו",
-    bookId: "1728",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699192870/vned1nq8xic9ksn3seav.jpg",
   },
   {
-    imgSrc: "/bookimages/covers2/21295.jpg",
     title: "שושה - ספריה לעם #246",
     author: "יצחק בשביס-זינגר",
-    bookId: "21295",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699192870/fi27lv1mruc7d8oitifo.jpg",
   },
   {
-    imgSrc: "/bookimages/covers9/98396.jpg",
     title: "סונטת קרויצר",
     author: "ל.נ. טולסטוי",
-    bookId: "16906",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699192870/x4dtiurg8mx1w5ertkc9.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/936632.jpg",
     title: "הבת הסודית",
     author: "שילפי סומאיה גוודה",
-    bookId: "936632",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699192870/krbuyzpjgaimhgra3ccd.jpg",
   },
 ];
 
 exports.thrillersRecommendations = [
   {
-    imgSrc: "/bookimages/covers4/44660.jpg",
     title: "דולורס קלייבורן - חשדות מהעבר (עיבוד קולנועי)",
     author: "סטיבן קינג",
-    bookId: "44660",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193263/rn7wcnrycvjkypzmsucr.jpg",
   },
   {
-    imgSrc: "/bookimages/covers95/954038.jpg",
     title: "מסדר זיהוי",
     author: "ליעד שהם",
-    bookId: "954038",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193263/vuejvpebryh3t2vy12ef.jpg",
   },
   {
-    imgSrc: "/bookimages/covers66/669505.jpg",
     title: "מולד הירח   - דמדומים #2",
     author: "סטפני מאייר",
-    bookId: "669505",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193263/paivs0kgyu6cwnb7sqin.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/938378.jpg",
     title: "העריק - גבריאל אלון #09",
     author: "דניאל סילבה",
-    bookId: "938378",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193264/qpshgou5vho4yhpbg9n0.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/934888.jpg",
     title: "הנערה שבעטה בקן הצרעות - מילניום #3",
     author: "סטיג לרסון",
-    bookId: "934888",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193264/f4nkoi369eimrjcke4bj.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/936631.jpg",
     title: "טיפות שלג - פרוזה #",
     author: "א.ד. מילר",
-    bookId: "936631",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193264/srplogdak4fbhdp0mhai.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/936849.jpg",
     title: "חשוב על מספר - דייב גרני  #1",
     author: "ג'ון ורדון",
-    bookId: "936849",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193264/jogjmqdwa3uzmorlofbc.jpg",
   },
   {
-    imgSrc: "/bookimages/covers4/49735.jpg",
     title: "עיני הדרקון",
     author: "סטיבן קינג",
-    bookId: "3114",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193263/eyhriuocc9hrhonzwo7h.jpg",
   },
   {
-    imgSrc: "/bookimages/covers20/205791.jpg",
     title: "האישה בלבן",
     author: "וילקי קולינס",
-    bookId: "205791",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193264/rkrzh6woxqkotwhwh8qp.jpg",
   },
   {
-    imgSrc: "/bookimages/covers21/217815.jpg",
     title: "מות אכילס - תיבת פנדורין #4",
     author: "בוריס אקונין",
-    bookId: "217815",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193264/akmsuygpefvfbozjn6fu.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/930192.jpg",
     title: "יועץ ממלכתי - תיבת פנדורין #6",
     author: "בוריס אקונין",
-    bookId: "930192",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193264/e6buux5qqntk5cvnclgf.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/1710.jpg",
     title: "גמביט טורקי - תיבת פנדורין #2",
     author: "בוריס אקונין",
-    bookId: "1710",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193264/nj8phbexcpzsd3zce1yh.jpg",
   },
   {
-    imgSrc: "/bookimages/covers20/205482.jpg",
     title: "עד הרצח הבא",
     author: "יורם מארק-רייך",
-    bookId: "205482",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193264/sravcugqfpjd9dk13yyi.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/936911.jpg",
     title: "ברייטון רוק",
     author: "גרהם גרין",
-    bookId: "936911",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193264/wxm5oj1tfnkxda3aenzu.jpg",
   },
   {
-    imgSrc: "/bookimages/covers68/689859.jpg",
     title: "ליקוי חמה  - דמדומים #3",
     author: "סטפני מאייר",
-    bookId: "689859",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193264/njf1zwlomvarygrf3xxy.jpg",
   },
   {
-    imgSrc: "/bookimages/covers4/41009.jpg",
     title: "קנון מהופך",
     author: "פאולו מאורנסיג",
-    bookId: "41009",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193263/k1xsetlunydrvcynwvbj.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/938375.jpg",
     title: "הכתרה - תיבת פנדורין #7",
     author: "בוריס אקונין",
-    bookId: "938375",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193264/tkkyzmacl8jcd1ywq9vl.jpg",
   },
   {
-    imgSrc: "/bookimages/covers21/214810.jpg",
     title: "שבוע באמצע החיים",
     author: "ליעד שהם",
-    bookId: "214810",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193264/tv1yjosgq0fsl0setfm9.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/937564.jpg",
     title: "אבירי הדרך - סיפור הרפתקאות - ספריה לעם #631",
     author: "מייקל שייבון",
-    bookId: "937564",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193264/h7xqjhlhmlcx80vo3jhn.jpg",
   },
   {
-    imgSrc: "/bookimages/covers69/695271.jpg",
     title: "רשת השמים רחבה - כרך 5 - סיפורי האוטורי #5",
     author: "ליאן הרן",
-    bookId: "695271",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193264/aj8lnp2bqmfam4oslyfv.jpg",
   },
 ];
 
 exports.biographyRecommendations = [
   {
-    imgSrc: "/bookimages/covers14/144061.jpg",
     title: "זיכרונות",
     author: "סוזי אבן",
-    bookId: "144061",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193265/qbljup55btzzwhaz1kha.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/937314.jpg",
     title: "3096 ימים",
     author: "נטשה קמפוש",
-    bookId: "937314",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193265/m20zdvsazmml7oumnttw.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/930537.jpg",
     title: "אדם הולך הביתה",
     author: "יורם עשת-אלקלעי",
-    bookId: "930537",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193265/zidsgmu4mwtxbyxvzmao.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/935316.jpg",
     title:
       "מבצע קציצה - סיפורו של המרגל האמיתי ששינה את מהלכה של מלחמת העולם השנייה",
     author: "בן מקנטייר",
-    bookId: "935316",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193265/fpdcfdnxmbeccbysmqmt.jpg",
   },
   {
-    imgSrc: "/bookimages/covers90/907075.jpg",
     title: "וקראתם דרור",
     author: "רונית לוינשטיין-מלץ",
-    bookId: "907075",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193265/senvbqwr3jlp7ypihsxh.jpg",
   },
   {
-    imgSrc: "/bookimages/covers90/907406.jpg",
     title: "לבד בברלין",
     author: "הנס פאלאדה",
-    bookId: "907406",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193265/yickmchutqgsehxv94mt.jpg",
   },
   {
-    imgSrc: "/bookimages/covers90/907059.jpg",
     title: "בעוז ובהדר - סיפורו של מנחם בגין",
     author: "גלילה רון פדר עמית",
-    bookId: "907059",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193265/nwd1bt6zft48hanbiyon.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/930541.jpg",
     title: "שבוי בפקודה! - צנחן שבוי בכלא בקהיר",
     author: "אילן בכר",
-    bookId: "930541",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193265/cor9iehbznk4rinmlrxw.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/933576.jpg",
     title: "המדע של לאונרדו - הרעיונות הנפלאים של גאון הרנסנס ",
     author: "פריטיוף קפרה",
-    bookId: "933418",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193266/ubyib0chbxn3t8rwysdh.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/930681.jpg",
     title: "לפעמים זה מצליח",
     author: "דניאלה סגל",
-    bookId: "930681",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193266/w2pp3l44xfwqw8ejxy9e.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/930706.jpg",
     title: "יתומי סטלין - שלושה דורות של אהבה ומלחמה",
     author: "אואן מתיוס",
-    bookId: "930706",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193265/wstjwxgp6ghsht7xkkn7.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/937243.jpg",
     title: "הארנב מפטגוניה",
     author: "קלוד לנצמן",
-    bookId: "937243",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193265/ly2ljtyjypqajouvlbgr.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/930499.jpg",
     title: "לאכול, להתפלל, לאהוב (עטיפת הסרט)",
     author: "אליזבת גילברט",
-    bookId: "930499",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193265/tigfedlc5jpxxslzaozz.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/799.jpg",
     title: "אף אחד בשום מקום",
     author: "דונה ויליאמס",
-    bookId: "799",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193265/qns1sedffy5k8i45ruof.jpg",
   },
   {
-    imgSrc: "/bookimages/covers90/907013.jpg",
     title: "השוטר סוויד",
     author: "יוסף סוויד",
-    bookId: "907013",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193265/k5wmuyeuwqkcqdc9pjxr.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/930529.jpg",
     title: "עד בוא השמש",
     author: "צבי א' טל",
-    bookId: "930529",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193266/lmgtrqp0nnq8evaw0rxq.jpg",
   },
   {
-    imgSrc: "/bookimages/covers22/227073.jpg",
     title: "מחברות המלחמה",
     author: "מארגריט דיראס",
-    bookId: "227073",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193265/epxhgqrj769u9rln0ujg.jpg",
   },
   {
-    imgSrc: "/bookimages/covers90/903786.jpg",
     title: "נתק'ה - הקצין הפצוע שחזר לשדה הקרב",
     author: "נתק'ה ניר",
-    bookId: "903786",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193265/cfmwwhjp3winkzk8nvtm.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/937523.jpg",
     title: "אני היהודי האחרון - שואה",
     author: "חיל רייכמן",
-    bookId: "937523",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193266/lofen3k1orjmqjuclsxi.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/7282.jpg",
     title: "טיפול באמצעות מים חמים",
     author: "פטריק הוריי ודיו",
-    bookId: "7282",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193265/rwyninfx6swbzdszguzm.jpg",
   },
 ];
 
 exports.poetryRecommendations = [
   {
-    imgSrc: "/bookimages/covers63/634021.jpg",
     title: "אלג'יר",
     author: "רוני סומק",
-    bookId: "634021",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210153/d1vqdcqsmgghxoojzhrf.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/4656.jpg",
     title: "שעשועים יום יום",
     author: "חיים באר",
-    bookId: "4656",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210154/d1swhr7ovscymgnh0ymw.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/4266.jpg",
     title: "תת הכרה נפתחת כמו מניפה - מבחר השירים 1963-1985",
     author: "יונה וולך",
-    bookId: "4266",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210153/z9w9ytlcl7a8ffytqrxp.jpg",
   },
   {
-    imgSrc: "/bookimages/covers4/48210.jpg",
     title: "אהבת חן",
     author: "חיים נחמן ביאליק",
-    bookId: "10651",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210153/emjmq3cipig72ug3lkyr.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/977.jpg",
     title: "מרוב אהבה",
     author: "דליה רביקוביץ'",
-    bookId: "977",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210153/g7omq14ke68ouo4s3rhm.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/1640.jpg",
     title: "שירים בכסות הערב - מבחר מכל שיריו",
     author: "נתן יונתן",
-    bookId: "1640",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210153/cmmsgmf68sojxqckd5r8.jpg",
   },
   {
-    imgSrc: "/bookimages/covers1/17241.jpg",
     title: "שירי לידה",
     author: "חגית בנזימן",
-    bookId: "17241",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210154/l3c6svdfihljdmddkjbe.jpg",
   },
   {
-    imgSrc: "/bookimages/covers95/958241.jpg",
     title:
       "הטור השביעי 3 (מהדורה מיוחדת) - 1952-1948 - הטור השביעי - מהדורה מיוחדת #3",
     author: "נתן אלתרמן",
-    bookId: "958241",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210153/p1zttvkpbwnltrhomf3p.jpg",
   },
   {
-    imgSrc: "/bookimages/covers65/658622.jpg",
     title: "באר חלב באמצע עיר - כל השירים 1968-1992",
     author: "חזי לסקלי",
-    bookId: "658622",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210153/snc0wgbojxlceqxhry7r.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/2034.jpg",
     title: "התפרדויות",
     author: "יהונתן גפן",
-    bookId: "2034",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210153/xkckk2feelm6ridmmir0.jpg",
   },
   {
-    imgSrc: "/bookimages/covers22/220914.jpg",
     title: "אנחנו אבן היסוד",
     author: "אהרן שמי",
-    bookId: "220914",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210153/ifzfyedssiiovgpl5zxf.jpg",
   },
   {
-    imgSrc: "/bookimages/covers2/21124.jpg",
     title: "כל החלב והדבש - שירים",
     author: "נתן זך",
-    bookId: "21124",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210153/yn0ghmnibxkxjdnah9zi.jpg",
   },
   {
-    imgSrc: "/bookimages/covers22/221461.jpg",
     title: "שיעור מולדת - שירים על הארץ ודברים על הבית",
     author: "יואב קוטנר",
-    bookId: "221461",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210153/bazxzbd56vxbctbuwbv3.jpg",
   },
   {
-    imgSrc: "/bookimages/covers68/689337.jpg",
     title: "השיר אל הזמן העובר",
     author: "יצחק שלו",
-    bookId: "689337",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210154/dzyctlqgo43huo3stj2g.jpg",
   },
   {
-    imgSrc: "/bookimages/covers17/178725.jpg",
     title: "אור זרוע - מבחר שירים",
     author: "שמשון מלצר",
-    bookId: "952151",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210153/zwdayyb8gzajgrjvzhfb.jpg",
   },
   {
-    imgSrc: "/bookimages/covers21/218833.jpg",
     title: "שירת הלב",
     author: "מיכל סנונית",
-    bookId: "218833",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210153/hgajxm1lt0jr9gde2eaw.jpg",
   },
   {
-    imgSrc: "/bookimages/covers3/34893.jpg",
     title: "המתופף של המהפכה - עמודים לספרות עברית",
     author: "רוני סומק",
-    bookId: "34893",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210153/wtst7y7f7p8xjzhdnqqt.jpg",
   },
   {
-    imgSrc: "/bookimages/covers1/10887.jpg",
     title: "עיר הירח",
     author: "תרצה אתר",
-    bookId: "10887",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210153/l2ntkgaicigfs7whiegj.jpg",
   },
   {
-    imgSrc: "/bookimages/covers1/10927.jpg",
     title: "צורות",
     author: "יונה וולך",
-    bookId: "10927",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210153/vhmxtxs0h4t9mdnbsdkh.jpg",
   },
   {
-    imgSrc: "/bookimages/covers1/11927.jpg",
     title: "שירי אהבה",
     author: "נתן אלתרמן",
-    bookId: "11927",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210153/hdocmuwgy8xfjpssxnsl.jpg",
   },
 ];
 
 exports.fantasyRecommendations = [
   {
-    imgSrc: "/bookimages/covers3/35194.jpg",
     title: "חלופיים",
     author: "מייקל מרשל סמית",
-    bookId: "35194",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209619/c7x4bpfqc0rs8xgelqyv.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/5397.jpg",
     title: "הגבעות הירוקות של הארץ - סדרה למדע בדיוני #",
     author: "רוברט היינליין",
-    bookId: "5397",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209618/t0indt9o1uop0ha1pluo.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/1153.jpg",
     title: "הארי פוטר והאסיר מאזקבאן  - הארי פוטר #3",
     author: "ג'יי. קיי. רולינג",
-    bookId: "1153",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209619/nq12xfkb5rhq8dtaklyy.jpg",
   },
   {
-    imgSrc: "/bookimages/covers14/145240.jpg",
     title: "דרקוני הזכוכית - עולמות ירח #2",
     author: "שון מקמאלן",
-    bookId: "145240",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209619/xlcuykglm6tcaffykjo2.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/796.jpg",
     title: "הארי פוטר וחדר הסודות - הארי פוטר #2",
     author: "ג'יי. קיי. רולינג",
-    bookId: "796",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209619/zzeojgcsr9rs5h6hi6an.jpg",
   },
   {
-    imgSrc: "/bookimages/covers21/216555.jpg",
     title: "ציידי חולית",
     author: "בריאן אנדרסון קווין הרברט",
-    bookId: "216555",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209618/aruxbzyijatiryuiuelc.jpg",
   },
   {
-    imgSrc: "/bookimages/covers90/901245.jpg",
     title: "כופרי חולית   - חולית #5",
     author: "פרנק הרברט",
-    bookId: "5029",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209619/iljr8jskgo9ksu6onzpy.jpg",
   },
   {
-    imgSrc: "/bookimages/covers3/37119.jpg",
     title: "משיח חולית   - חולית #2",
     author: "פרנק הרברט",
-    bookId: "37119",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209618/ftcptelbb3xsppsojcfq.jpg",
   },
   {
-    imgSrc: "/bookimages/covers1/10781.jpg",
     title: "נסיך התוהו - אמבר הסוף - בחזרה לאמבר #5",
     author: "רוג'ר זילאזני",
-    bookId: "10781",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209618/ixsjshrjfs1okcbo1r0u.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/5310.jpg",
     title: "בסימן התוהו - בחזרה לאמבר #3",
     author: "רוג'ר זילאזני",
-    bookId: "5310",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209619/k9osslwsgf26ssneb5rm.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/5105.jpg",
     title: "דמה של אמבר - בחזרה לאמבר #2",
     author: "רוג'ר זילאזני",
-    bookId: "5105",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209618/kbwzwcfuesqdwkqkvljl.jpg",
   },
   {
-    imgSrc: "/bookimages/covers1/11054.jpg",
     title: "קלפים של כליה - בחזרה לאמבר #1",
     author: "רוג'ר זילאזני",
-    bookId: "11054",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209619/mfsjffqgk1krlnny3aa1.jpg",
   },
   {
-    imgSrc: "/bookimages/covers1/11188.jpg",
     title: "ידו של אוברון - ממלכת אמבר #4",
     author: "רוג'ר זילאזני",
-    bookId: "11188",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209619/gssydybut9g8fys4ynhw.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/4954.jpg",
     title: "תשעה נסיכים לאמבר - ממלכת אמבר #1",
     author: "רוג'ר זילאזני",
-    bookId: "4954",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209619/uba0msb8rvhaqp1iizzf.jpg",
   },
   {
-    imgSrc: "/bookimages/covers59/593895.jpg",
     title: "בסימן החדקרן - ממלכת אמבר #3",
     author: "רוג'ר זילאזני",
-    bookId: "4825",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209618/nwmsnnvaraf7so8fyoau.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/795.jpg",
     title: "הארי פוטר ואבן החכמים   - הארי פוטר #1",
     author: "ג'יי. קיי. רולינג",
-    bookId: "795",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209618/cqvqxcnelcpmadrnhft9.jpg",
   },
   {
-    imgSrc: "/bookimages/covers1/11171.jpg",
     title: "חולית  - חולית  #1",
     author: "פרנק הרברט",
-    bookId: "11171",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209619/ta4dy54f0pww5zhemv1s.jpg",
   },
   {
-    imgSrc: "/bookimages/covers90/905132.jpg",
     title: "מתחת לכיפה השקופה",
     author: "סטיבן קינג",
-    bookId: "905132",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209618/xqv7mh96jieeczahi8ai.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/1565.jpg",
     title: "הארי פוטר ומסדר עוף החול  - איורים: מרי גראנפרה - הארי פוטר #5",
     author: "ג'יי. קיי. רולינג",
-    bookId: "1565",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209619/rahpnpgt19wzmvsqroqc.jpg",
   },
   {
-    imgSrc: "/bookimages/covers3/36105.jpg",
     title: "שליפת השלושה - המגדל האפל #2",
     author: "סטיבן קינג",
-    bookId: "36105",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209618/zbekjqn6n9ic7jtf5ccs.jpg",
   },
 ];
 
 exports.madabRecommendations = [
   {
-    imgSrc: "/bookimages/covers3/35194.jpg",
     title: "חלופיים",
     author: "מייקל מרשל סמית",
-    bookId: "35194",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210155/yxfqg4aodayhbqgtrcqu.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/5397.jpg",
     title: "הגבעות הירוקות של הארץ - סדרה למדע בדיוני #",
     author: "רוברט היינליין",
-    bookId: "5397",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210156/yuhkgdxmhe2lko7tf9wx.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/1153.jpg",
     title: "הארי פוטר והאסיר מאזקבאן  - הארי פוטר #3",
     author: "ג'יי. קיי. רולינג",
-    bookId: "1153",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210155/itfk9h69k48r7ku39cfo.jpg",
   },
   {
-    imgSrc: "/bookimages/covers14/145240.jpg",
     title: "דרקוני הזכוכית - עולמות ירח #2",
     author: "שון מקמאלן",
-    bookId: "145240",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210156/blkbophy2o16ttjciaxb.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/796.jpg",
     title: "הארי פוטר וחדר הסודות - הארי פוטר #2",
     author: "ג'יי. קיי. רולינג",
-    bookId: "796",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210156/xrvp143ttrsjtkb3auox.jpg",
   },
   {
-    imgSrc: "/bookimages/covers21/216555.jpg",
     title: "ציידי חולית",
     author: "בריאן אנדרסון קווין הרברט",
-    bookId: "216555",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210156/gwba9nampxd1mjzdbn9g.jpg",
   },
   {
-    imgSrc: "/bookimages/covers90/901245.jpg",
     title: "כופרי חולית   - חולית #5",
     author: "פרנק הרברט",
-    bookId: "5029",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210155/g2c3vgperznzkrqzwi55.jpg",
   },
   {
-    imgSrc: "/bookimages/covers3/37119.jpg",
     title: "משיח חולית   - חולית #2",
     author: "פרנק הרברט",
-    bookId: "37119",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210155/opge7qtyhyet6ucmtj6f.jpg",
   },
   {
-    imgSrc: "/bookimages/covers1/10781.jpg",
     title: "נסיך התוהו - אמבר הסוף - בחזרה לאמבר #5",
     author: "רוג'ר זילאזני",
-    bookId: "10781",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210156/sizwbopm49q4jxdbzmyd.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/5310.jpg",
     title: "בסימן התוהו - בחזרה לאמבר #3",
     author: "רוג'ר זילאזני",
-    bookId: "5310",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210155/ls2zkqrq8uyx20qg1uxd.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/5105.jpg",
     title: "דמה של אמבר - בחזרה לאמבר #2",
     author: "רוג'ר זילאזני",
-    bookId: "5105",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210155/zgvukbxomxwg9txiv6np.jpg",
   },
   {
-    imgSrc: "/bookimages/covers1/11054.jpg",
     title: "קלפים של כליה - בחזרה לאמבר #1",
     author: "רוג'ר זילאזני",
-    bookId: "11054",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210155/iws1pyzrcs2dwt3fkgrm.jpg",
   },
   {
-    imgSrc: "/bookimages/covers1/11188.jpg",
     title: "ידו של אוברון - ממלכת אמבר #4",
     author: "רוג'ר זילאזני",
-    bookId: "11188",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210156/hjebcxzjsrruegvjdi0u.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/4954.jpg",
     title: "תשעה נסיכים לאמבר - ממלכת אמבר #1",
     author: "רוג'ר זילאזני",
-    bookId: "4954",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210155/jye0qsupbhhvvd036sdr.jpg",
   },
   {
-    imgSrc: "/bookimages/covers59/593895.jpg",
     title: "בסימן החדקרן - ממלכת אמבר #3",
     author: "רוג'ר זילאזני",
-    bookId: "4825",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210156/erluqyetytybgn3zgia5.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/795.jpg",
     title: "הארי פוטר ואבן החכמים   - הארי פוטר #1",
     author: "ג'יי. קיי. רולינג",
-    bookId: "795",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210156/g0o2a2h7ymh4y6cd4sc5.jpg",
   },
   {
-    imgSrc: "/bookimages/covers1/11171.jpg",
     title: "חולית  - חולית  #1",
     author: "פרנק הרברט",
-    bookId: "11171",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210156/ovkddhzgc7d6mflat4zo.jpg",
   },
   {
-    imgSrc: "/bookimages/covers90/905132.jpg",
     title: "מתחת לכיפה השקופה",
     author: "סטיבן קינג",
-    bookId: "905132",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210155/wz1hgtlukymg9ytjfpqp.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/1565.jpg",
     title: "הארי פוטר ומסדר עוף החול  - איורים: מרי גראנפרה - הארי פוטר #5",
     author: "ג'יי. קיי. רולינג",
-    bookId: "1565",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210155/llruvlbfbdhkeh1q7bkw.jpg",
   },
   {
-    imgSrc: "/bookimages/covers3/36105.jpg",
     title: "שליפת השלושה - המגדל האפל #2",
     author: "סטיבן קינג",
-    bookId: "36105",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210156/v4ylhjleqbtxcnvmji2w.jpg",
   },
 ];
 
 exports.childrenRecommendations = [
   {
-    imgSrc: "/bookimages/covers63/633879.jpg",
     title: "בגן שלי",
     author: "נורית צרפתי",
-    bookId: "633879",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193267/od2iob8ecg8k5ziifs36.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/2686.jpg",
     title: "אוזו ומוזו מכפר קאקארוזו",
     author: "אפרים סידון",
-    bookId: "2686",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193267/hewkaippv33puthyabme.jpg",
   },
   {
-    imgSrc: "/bookimages/covers90/905055.jpg",
     title: "בום-בול-גול!",
     author: "בוב קולאר",
-    bookId: "905055",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193267/sjwxkgaqhy1rmcbawplp.jpg",
   },
   {
-    imgSrc: "/bookimages/covers4/43525.jpg",
     title: "אריה בלילות",
     author: "מאיר שלו",
-    bookId: "43525",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193267/p9amejciiquzsbeclqzw.jpg",
   },
   {
-    imgSrc: "/bookimages/covers12/121595.jpg",
     title: "הכבש הששה עשר - מהדורה מאויירת",
     author: "יהונתן גפן",
-    bookId: "121595",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193267/jwdsie1n73dr1ghgnti5.jpg",
   },
   {
-    imgSrc: "/bookimages/covers4/43964.jpg",
     title: "בינה נוסעת מבנימינה",
     author: "יונה טפר",
-    bookId: "43964",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193267/hkyyvdjs34zkhi8cm2hb.jpg",
   },
   {
-    imgSrc: "/bookimages/covers95/955942.jpg",
     title: " מי רוצה שק־קמח",
     author: "דויד גרוסמן",
-    bookId: "955942",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193267/acuvs3ezzx4mhwc48uwe.jpg",
   },
   {
-    imgSrc: "/bookimages/covers68/689303.jpg",
     title: "הילד שאהב לאכול ספרים",
     author: "אוליבר  ג'פרס",
-    bookId: "689303",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193267/yckl686pn3faeqly7wkd.jpg",
   },
   {
-    imgSrc: "/bookimages/covers1/19842.jpg",
     title: "עצרת הינשופים",
     author: "דודו גבע",
-    bookId: "19842",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193267/cmqizdqolmsoh0ngr8vg.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/4184.jpg",
     title: "סלט-טוב-טרי",
     author: "מיריק שניר",
-    bookId: "4184",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193267/iezn7qv8tf8qka7fumet.jpg",
   },
   {
-    imgSrc: "/bookimages/covers90/901070.jpg",
     title: "אבא של עמליה נוסע לאוסטרליה",
     author: "אשכול נבו",
-    bookId: "901070",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193267/lwjejcy6otp5ngl3g5ko.jpg",
   },
   {
-    imgSrc: "/bookimages/covers68/689259.jpg",
     title: "משימה עולמית 6: מי יציל את פסל החרות? - משימה עולמית #6",
     author: "גלילה רון פדר עמית",
-    bookId: "689259",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193267/pgjx0qjv8gkyqcejort7.jpg",
   },
   {
-    imgSrc: "/bookimages/covers5/50589.jpg",
     title:
       "סיפורים מהאולימפוס - מיתולוגיה יונית לילדים - מיתולוגיה יונית לילדים #",
     author: "רקפת זהר",
-    bookId: "50589",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193267/rvbxzfpzrxzunhiaebgd.jpg",
   },
   {
-    imgSrc: "/bookimages/covers2/20039.jpg",
     title: "דודי שמחה",
     author: "ע הלל",
-    bookId: "20039",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193267/qaf3wgwtxpg8maxgxtjb.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/5897.jpg",
     title: "הזחל הרעב - קרטון",
     author: "אריק קרל",
-    bookId: "5897",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193267/mvodkohabomn2jwakbwy.jpg",
   },
   {
-    imgSrc: "/bookimages/covers1/11225.jpg",
     title: "מי מכיר את בילבי בת גרב?",
     author: "אַסְטְרִיד לִינְדְגְרֶן",
-    bookId: "11225",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193267/m8eignarzhgkybmsyuer.jpg",
   },
   {
-    imgSrc: "/bookimages/covers59/591407.jpg",
     title: "סיירת המדע 16 - תעלומת היסוד החטוף - סיירת המדע #16",
     author: "גלילה רון-פדר-עמית",
-    bookId: "591407",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193267/r2u2rlisicvj0w1zrtfq.jpg",
   },
   {
-    imgSrc: "/bookimages/covers63/633851.jpg",
     title: "הזקן עם הבייגלים",
     author: 'ד"ר אריה אבני',
-    bookId: "633851",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699193267/ltiunt4noe9rfsxexq8b.jpg",
   },
 ];
 
 exports.teenagersRecommendations = [
   {
-    imgSrc: "/bookimages/covers4/42163.jpg",
     title: "קיץ אחד ביחד",
     author: "ליאת רוטנר",
-    bookId: "1425",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210157/qqsibnjemd4kiel1qbkb.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/935518.jpg",
     title: "רעד - הזאבים של גרייס #1",
     author: "מגי סטיווטר",
-    bookId: "935518",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210158/g3ve4enl61nxerc3b57c.jpg",
   },
   {
-    imgSrc: "/bookimages/covers2/21306.jpg",
     title: "שלום לאבא",
     author: "רבקה מגן",
-    bookId: "21306",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210158/hbfuadqucc7yzaansxmf.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/1626.jpg",
     title: "מבחן קבלה",
     author: "נאוה מקמל-עתיר",
-    bookId: "1626",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210157/jrhx499ni0omhfa8idgb.jpg",
   },
   {
-    imgSrc: "/bookimages/covers68/688955.jpg",
     title: "טובי לולנס",
     author: "טימותה דה-פומבל",
-    bookId: "688955",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210157/d1tgrrb1xtqqxd5ncmoa.jpg",
   },
   {
-    imgSrc: "/bookimages/covers90/901500.jpg",
     title: "מאלאדר - קסם הקמע - מאלאדר #1",
     author: "ליאת רוטנר",
-    bookId: "901500",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210158/temxwfw7msfwjeckbjbn.jpg",
   },
   {
-    imgSrc: "/bookimages/covers95/956470.jpg",
     title: "מחוננת - שבע הממלכות - שבע הממלכות #1",
     author: "קריסטין קאשור",
-    bookId: "956470",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210157/gzbr2pk9kdev9pdxosjx.jpg",
   },
   {
-    imgSrc: "/bookimages/covers49/499342.jpg",
     title: "התגלית של הוגו קברה",
     author: "בריאן סלזניק",
-    bookId: "317236",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210158/ftewddcafhrbxzmch9zw.jpg",
   },
   {
-    imgSrc: "/bookimages/covers59/594459.jpg",
     title: "מנגינה שאין לה סוף",
     author: "עמי גדליה",
-    bookId: "4611",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210157/clv05emvodsdwarinnhl.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/1507.jpg",
     title: "מסתורי כוכב צלמוות",
     author: "ענת קופמן",
-    bookId: "1507",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210158/old3wevc2mv3h3wwfhin.jpg",
   },
   {
-    imgSrc: "/bookimages/covers21/215093.jpg",
     title: "נעלי החלקה",
     author: "נואל סטריטפילד",
-    bookId: "215093",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210157/ezpjfmsqesn37rhckrgd.jpg",
   },
   {
-    imgSrc: "/bookimages/covers9/97223.jpg",
     title: "נעלי בלט - פרוזה עשרה קלאסיקה #",
     author: "נואל סטריטפילד",
-    bookId: "97223",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210157/bkfadqgaybhen9sttxtw.jpg",
   },
   {
-    imgSrc: "/bookimages/covers49/498927.jpg",
     title: "מעורב ירושלמי - ספרי חמד #",
     author: "ליאת רוטנר",
-    bookId: "229180",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210157/rjjr6le84tgzuedda0x3.jpg",
   },
   {
-    imgSrc: "/bookimages/covers14/144815.jpg",
     title: "לנצח בגדול",
     author: "ליאת רוטנר",
-    bookId: "144815",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210158/i5sdv6k6qlwan3am4xd0.jpg",
   },
   {
-    imgSrc: "/bookimages/covers69/691165.jpg",
     title: "יצורי הפרא - בהשראת ספרו של מוריס סנדק",
     author: "דייב אגרס",
-    bookId: "691165",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210158/geogw0oqemcwrsjk9ty2.jpg",
   },
   {
-    imgSrc: "/bookimages/covers6/60716.jpg",
     title: "ילד האריות - הקרקס - ילד האריות #1",
     author: "זיזו קורדר",
-    bookId: "60716",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210157/yrz6w6r0ydp2fb58p9fn.jpg",
   },
   {
-    imgSrc: "/bookimages/covers4/44664.jpg",
     title: "המכוערים של דניאל",
     author: "עפרה גלברט-אבני",
-    bookId: "44664",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210157/daidqysyde3vzlaeluzy.jpg",
   },
   {
-    imgSrc: "/bookimages/covers14/145187.jpg",
     title: "אלכס ריידר - אלכס ריידר #1",
     author: "אנתוני הורוביץ",
-    bookId: "145187",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210157/qrfa3touy8kufrax9ki9.jpg",
   },
   {
-    imgSrc: "/bookimages/covers9/97284.jpg",
     title: "אראגון - הירושה #1",
     author: "כריסטופר פאוליני",
-    bookId: "97284",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210157/n5fttgz34b7ma8izqkkg.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/4916.jpg",
     title: "קמט בזמן - Time Quintet #1",
     author: "מדלן ל'אנגל",
-    bookId: "4916",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210158/sdyknbwdyifpkxweold6.jpg",
   },
 ];
 
 exports.playsRecommendations = [
   {
-    imgSrc: "/bookimages/covers4/49790.jpg",
     title: "מחכים לגודו (כ.רכה)",
     author: "סמואל בקט",
-    bookId: "3645",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210407/gwc1o63jnmkcp3vqs2oe.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/3648.jpg",
     title: "סוף משחק",
     author: "סמואל בקט",
-    bookId: "3648",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210408/iaivs8n7mwlqs8mwptot.jpg",
   },
   {
-    imgSrc: "/bookimages/covers1/11966.jpg",
     title: "מקבת",
     author: "ויליאם שקספיר",
-    bookId: "11966",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210408/jjogcqhjvoxulu75je0f.jpg",
   },
   {
-    imgSrc: "/bookimages/covers68/688439.jpg",
     title: "טיטוס אנדרוניקוס",
     author: "וויליאם שייקספיר",
-    bookId: "688439",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210407/qfkxbqtlixqer6wbjpxm.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/4147.jpg",
     title: "הסוחר מונציה - מהדורת 2011 - כתבי שקספיר #",
     author: "וויליאם שייקספיר",
-    bookId: "4147",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210408/jnmmy9kycc3tg25lok38.jpg",
   },
   {
-    imgSrc: "/bookimages/covers4/48030.jpg",
     title: "הלילה השנים עשר",
     author: "וויליאם שייקספיר",
-    bookId: "48030",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210407/zzdwffy1wjzqehltfpe8.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/4814.jpg",
     title: "ארבעה מחזות (עם עובד)",
     author: "אנטון צ'כוב",
-    bookId: "4814",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210408/oredbm7su8jgmm220cel.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/5093.jpg",
     title: "שלושה מחזות",
     author: "ברטולט ברכט",
-    bookId: "5093",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210407/jtdi9lklghga6kgfstcy.jpg",
   },
   {
-    imgSrc: "/bookimages/covers1/11825.jpg",
     title: "החולה המדומה",
     author: " מולייר",
-    bookId: "11825",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210407/knmi21agecp22cinihgy.jpg",
   },
   {
-    imgSrc: "/bookimages/covers21/217455.jpg",
     title: "חברון",
     author: "תמיר גרינברג",
-    bookId: "217455",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210408/rvbue42a3dfgqv2nugdc.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/930132.jpg",
     title: "משפחה חמה - מחזה",
     author: "ענת גוב",
-    bookId: "930132",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210408/fwuukkp1cptpzk7xgymd.jpg",
   },
   {
-    imgSrc: "/bookimages/covers37/373679.jpg",
     title: "מחזות   - גנוזים וידועים",
     author: "לאה גולדברג",
-    bookId: "6040",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210407/jv5ytw64r7sfvrhleygj.jpg",
   },
   {
-    imgSrc: "/bookimages/covers3/36462.jpg",
     title: "חברות הכי טובות",
     author: "ענת גוב",
-    bookId: "36462",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210408/lsllinb7s4cvhboecjeo.jpg",
   },
   {
-    imgSrc: "/bookimages/covers5/58330.jpg",
     title: "הבט אחורה בזעם[בית צבי] - עברית:ערן בניאל",
     author: "ג'והן אוסבורן",
-    bookId: "58330",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210407/qbyuzflgtbrlzk9z9cgd.jpg",
   },
+  { title: "מחזות", author: "נתן אלתרמן" },
   {
-    imgSrc: undefined,
-    title: "מחזות",
-    author: "נתן אלתרמן",
-    bookId: "11850",
-  },
-  {
-    imgSrc: "/bookimages/covers4/41877.jpg",
     title: "מחזות - טשרנחובסקי",
     author: "שאול טשרניחובסקי",
-    bookId: "41877",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210407/ly1olkmwm4xdem2f7xu0.jpg",
   },
 ];
 
 exports.nonFictionRecommendations = [
   {
-    imgSrc: "/bookimages/covers69/690746.jpg",
     title: "קיצור תולדות הזמן - רכה",
     author: "סטיבן ו' הוקינג",
-    bookId: "690746",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210411/cccce2proderhycel1ix.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/1266.jpg",
     title: "הנערה שאהבה סכנות",
     author: "הרצליה רז",
-    bookId: "1266",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210410/b6blqc5x8aywgj8qvyx4.jpg",
   },
   {
-    imgSrc: "/bookimages/covers1/15805.jpg",
     title: "שורשים ושיעורים בזמן",
     author: 'ד"ר בריאן ל. וייס',
-    bookId: "15805",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210410/jrsmwy6qwayid9lsdssh.jpg",
   },
   {
-    imgSrc: "/bookimages/covers90/901583.jpg",
     title: "התקף התובנה שלי - סיפור אמיתי",
     author: "ג'יל בולטה טיילור",
-    bookId: "901583",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210410/hvyqykjr4jpyypx8h0kq.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/933490.jpg",
     title: "כה אמר זרתוסטרה - ספר לכל אחד ולאף אחד (תרגום חדש)",
     author: "פרידריך ניטשה",
-    bookId: "933490",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210410/zdfqwek0hl7bm254skby.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/794.jpg",
     title: "חייו ומותו של סוקרטס",
     author: "אפלטון",
-    bookId: "794",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210410/tuxlnedrzsoboiewb2v6.jpg",
   },
   {
-    imgSrc: "/bookimages/covers4/49599.jpg",
     title: "שביתת הימאים - אופקים #180",
     author: "נמרוד אשל",
-    bookId: "49599",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210410/gxdftgvlxej4zjrk3ogy.jpg",
   },
   {
-    imgSrc: "/bookimages/covers21/216037.jpg",
     title: "מטריקס ופילוסופיה - ברוכים הבאים למדבר של הממשי",
     author: "עורך וויליאם  ארווין",
-    bookId: "216037",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210410/uejunsfpqe68rgpgdavh.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/930552.jpg",
     title: "רגעים היסטוריים ורגעים היסטריים - החלטות בתנאי משבר",
     author: "פרופ' מיכאל הרסגור",
-    bookId: "930552",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210410/zzmpu9zpq2tnskknpjrd.jpg",
   },
   {
-    imgSrc: "/bookimages/covers68/688019.jpg",
     title: "על הדברים החשובים באמת",
     author: "חיים שפירא",
-    bookId: "688019",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210410/uqordq18vhaln0asinqv.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/937043.jpg",
     title: "לחשוב! - מבוא חדש לפילוסופיה",
     author: "סיימון בלקברן",
-    bookId: "937043",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210410/thymrpmhuurbouhljm4t.jpg",
   },
   {
-    imgSrc: "/bookimages/covers3/37984.jpg",
     title: "הטרדה נפשית",
     author: "מארי-פראנס היריגוין",
-    bookId: "37984",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210410/vz8hvfunqystfmsfw4xw.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/1163.jpg",
     title: "פילוסופיה - מדריך לאושר",
     author: "אלן דה בוטון",
-    bookId: "1163",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210410/udgpgslycq7ypozlh29n.jpg",
   },
   {
-    imgSrc: "/bookimages/covers4/44370.jpg",
     title: "גורדייף והעבודה הפנימית",
     author: "אילן עמית (כרוך)",
-    bookId: "44370",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210410/t4fourn4fcti049f1fms.jpg",
   },
   {
-    imgSrc: "/bookimages/covers55/557706.jpg",
     title: "איפה היהודים שלי?",
     author: "ויזל אלי",
-    bookId: "557706",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210410/ngac8drxfnaoiqjal9mx.jpg",
   },
   {
-    imgSrc: "/bookimages/covers5/52707.jpg",
     title: "שיחות על תורת הנבואה",
     author: "ישעיהו ליבוביץ",
-    bookId: "15574",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210410/vb3c28arue9fqmzwsinu.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/9255.jpg",
     title: "יוספוס פלביוס",
     author: "דוד פלוסר",
-    bookId: "9255",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210410/bbfupv04dyxrov2g1bnp.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/1957.jpg",
     title: "במרחק הליכה",
     author: "ארנה קזין",
-    bookId: "1957",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210410/dphgtmy29bepvovo5lwg.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/704.jpg",
     title: "הפילוסופים הגדולים שלנו - הפילוסופיה היהודית בימי הביניים",
     author: "פרופ' אליעזר שביד",
-    bookId: "704",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210410/mq6mtabneea5te5mhttu.jpg",
   },
   {
-    imgSrc: "/bookimages/covers95/955841.jpg",
     title: "הרבי מלובביץ' - בחייו ובחיים שלאחר חייו",
     author: "מנחם פרידמן",
-    bookId: "955841",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210410/m4zcvpesuh1pfrnna0rm.jpg",
   },
 ];
 
 exports.selfHelpRecommendations = [
   {
-    imgSrc: "/bookimages/covers3/38605.jpg",
     title: "רפואה והחוש השביעי - גישה מהפכנית לטיפול וריפוי",
     author: "נאדר בוטו",
-    bookId: "38605",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210413/h3j28rxhwcpuytlc7up0.jpg",
   },
   {
-    imgSrc: "/bookimages/covers68/688408.jpg",
     title: "הלב הנבון",
     author: "ג'ק קורנפילד",
-    bookId: "688408",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210413/gurvftz1johsaywszqpr.jpg",
   },
   {
-    imgSrc: "/bookimages/covers3/35081.jpg",
     title: "כשהדברים מתפרקים",
     author: "פמה צ'ודרון",
-    bookId: "35081",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210412/rpmlylzgofxbu8pqg3ye.jpg",
   },
   {
-    imgSrc: "/bookimages/covers1/17453.jpg",
     title: "ריפוי בנבכי הזמן - הטיפול ברגרסיה לגלגולים קודמים",
     author: 'ד"ר בריאן ל. וייס',
-    bookId: "17453",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210412/ana3sr4hdwri4wjcyxjg.jpg",
   },
   {
-    imgSrc: "/bookimages/covers3/32948.jpg",
     title: "הנזיר שמכר את הפרארי שלו",
     author: "רובין ס' שארמה",
-    bookId: "32948",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210412/r7sc4of6jmlgshh9s11y.jpg",
   },
   {
-    imgSrc: "/bookimages/covers3/39977.jpg",
     title: "כוחו של הרגע הזה - מדריך רוחני להארה",
     author: "אקהרט טול",
-    bookId: "39977",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210412/kg2jr5gotceqdwabv28g.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/1240.jpg",
     title: "השטן והעלמה פרים - כריכה קשה",
     author: "פאולו קואלו",
-    bookId: "1240",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210412/wr6p0auyurgtgcdvkots.jpg",
   },
   {
-    imgSrc: "/bookimages/covers4/44982.jpg",
     title: "צעד קטן לשינוי גדול - דרך הקאיזן - כריכה קשה #",
     author: "רוברט מאורר",
-    bookId: "44982",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210412/dpiqtdebgywcgjuolw5n.jpg",
   },
   {
-    imgSrc: "/bookimages/covers22/221089.jpg",
     title: "סוטרות היוגה של פטנג'לי",
     author: "סוואמי ונקטסאננדה",
-    bookId: "221089",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210412/sb2rhe4z1ii03lwsilmp.jpg",
   },
   {
-    imgSrc: "/bookimages/covers3/34429.jpg",
     title: "ארבע ההסכמות - מדריך מעשי לחופש אישי",
     author: "דון מיגל רואיס",
-    bookId: "34429",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210414/gcww1sggcbthuvgpaxee.jpg",
   },
   {
-    imgSrc: "/bookimages/covers90/905114.jpg",
     title: "שבעה שערים לתקשור - גילוי הייעוד הרוחני, קבלת מסרים וריפוי בתקשור",
     author: "ירון זפרן",
-    bookId: "905114",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210413/kijxovonsq8mz89hjzp3.jpg",
   },
   {
-    imgSrc: "/bookimages/covers4/43715.jpg",
     title: "לאהוב את מה שיש - ארבע שאלות שיכולות לשנות חיים",
     author: "ביירון קייטי",
-    bookId: "43715",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210413/o8uirklpfzb6weo9yiip.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/3366.jpg",
     title: "גוף ונפש לנצח - כריכה קשה",
     author: "דיפאק צ'ופרה",
-    bookId: "3366",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210412/h3haiwh5eourehbluixs.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/3437.jpg",
     title: "קבלה באור בהיר - דרך החוויה אל תורת הנסתר",
     author: "יגאל אריכא",
-    bookId: "3437",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210412/vcwrbpelutnwzq7a6es8.jpg",
   },
   {
-    imgSrc: "/bookimages/covers2/29197.jpg",
     title: "עוצמת הרכות - ריפוי הגוף-נפש ומערכות יחסים במשפחה ובחברה",
     author: "טובי בראונינג",
-    bookId: "29197",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210412/jozv0j7d1rtjpodswsva.jpg",
   },
   {
-    imgSrc: "/bookimages/covers3/34710.jpg",
     title: "גלגול נשמות - מציאות העולה על כל דמיון",
     author: "יגאל אריכא",
-    bookId: "34710",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210413/zti4aebgyjgnf3lxnjpy.jpg",
   },
   {
-    imgSrc: "/bookimages/covers21/217828.jpg",
     title: "הסוד - כריכה קשה",
     author: "רונדה בירן",
-    bookId: "217828",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210412/fltv32akpt3cejhvdkwt.jpg",
   },
   {
-    imgSrc: "/bookimages/covers90/901544.jpg",
     title: "סודם של קלפי החיות האינדיאנים",
     author: "רוני בנימין",
-    bookId: "901544",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210412/iskv9utrul6kmqux0jy8.jpg",
   },
   {
-    imgSrc: "/bookimages/covers4/47244.jpg",
     title: "מסע אל המרפא - להעיר את התבונה הפנימית שלנו",
     author: "דיפאק צ'ופרה",
-    bookId: "3414",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210412/zr6ysx3uyws0g55ztrrz.jpg",
   },
   {
-    imgSrc: "/bookimages/covers95/953783.jpg",
     title: "הכוח",
     author: "רונדה בירן",
-    bookId: "953783",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210413/fusv0hixllvlqnhvsiln.jpg",
   },
 ];
 
 exports.psychologyRecommendations = [
   {
-    imgSrc: "/bookimages/covers14/145371.jpg",
     title: "כיצד לקרוא אנשים - על פי הדיבור, הקול, שפת הגוף והפנים",
     author: "ליליאן גלס",
-    bookId: "145371",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210671/hpa2reesn41auka4lqma.jpg",
   },
   {
-    imgSrc: "/bookimages/covers4/47449.jpg",
     title: "משחק ומציאות",
     author: "ד. ו. ויניקוט",
-    bookId: "47449",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210671/wh2t7ppzpcd3hhs6tt9n.jpg",
   },
   {
-    imgSrc: "/bookimages/covers22/221762.jpg",
     title: "הקוסם, השוטה והקיסרית",
     author: "רות נצר",
-    bookId: "221762",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210671/rmavocvrbjt00noktykv.jpg",
   },
   {
-    imgSrc: "/bookimages/covers3/35632.jpg",
     title: "התמקדות",
     author: "יוג'ין ט. ג'נדלין",
-    bookId: "35632",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210671/lzyzfqxdxppja3j4rckw.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/936273.jpg",
     title: "אדם רגיש מאוד - לצמוח כשהעולם מציף אותך",
     author: 'ד"ר איליין ארון',
-    bookId: "936273",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210671/fdmakjpdofik1hcsmfe4.jpg",
   },
   {
-    imgSrc: "/bookimages/covers14/145566.jpg",
     title:
       "להיות דולפין - התמודדות עם תוקפנות וחולשה בהורות, בזוגיות, בעבודה ובצבא",
     author: "רבקה נרדי",
-    bookId: "122814",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210672/zlthlmorqsufbws7wbfn.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/750.jpg",
     title: "מימזיס - הפסיכולוגיה של הציור המודרני",
     author: "יגאל ורדי",
-    bookId: "750",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210672/vtmdacl7d5eygyzak2mq.jpg",
   },
   {
-    imgSrc: "/bookimages/covers3/32978.jpg",
     title: "על הספה",
     author: "ארווין ד' יאלום",
-    bookId: "32978",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210671/yv1ughvd0eraj9ue1pxp.jpg",
   },
   {
-    imgSrc: "/bookimages/covers65/653435.jpg",
     title: "אמנות האהבה - תרגום חדש, מהדורה מעודכנת",
     author: "אריך פרום",
-    bookId: "18963",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210671/xw6ramm1cfdbveksqju4.jpg",
   },
   {
-    imgSrc: "/bookimages/covers3/35111.jpg",
     title: "הקצה הפרימיטיבי של החוויה - פסיכואנליזה",
     author: "תומס ה' אוגדן",
-    bookId: "35111",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210671/qmjbvv06s2f2olczivyl.jpg",
   },
   {
-    imgSrc: "/bookimages/covers6/67441.jpg",
     title: "קסמן של אגדות - ותרומתן להתפתחותו הנפשית של הילד",
     author: "ברונו בטלהיים",
-    bookId: "23443",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210671/ihopz5glniy29exscfqx.jpg",
   },
   {
-    imgSrc: "/bookimages/covers10/106621.jpg",
     title: "זכרונות חלומות מחשבות",
     author: "קרל גוסטב יונג",
-    bookId: "106621",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210671/eoe1wdeoz8pl9eeqqbaz.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/9760.jpg",
     title: "נצרות ופסיכיאטריה - התיאולוגיה שמאחורי הפסיכולוגיה",
     author: "מרדכי רוטנברג",
-    bookId: "9760",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210672/w37ozm5qadt1uqaeg1fz.jpg",
   },
   {
-    imgSrc: "/bookimages/covers1/10895.jpg",
     title: "סוד הזיכרון המצוין - טכניקות יעילות לזכור בקלות",
     author: "ערן כץ",
-    bookId: "10895",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210671/cxoamnycm1tbpxrxcrkq.jpg",
   },
   {
-    imgSrc: "/bookimages/covers61/611137.jpg",
     title: "בדרך לפסיכותרפיה הומניסטית",
     author: "פרופ' בריל פ.",
-    bookId: "19326",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210671/u1wghovf4pi2pmfxcxwf.jpg",
   },
   {
-    imgSrc: "/bookimages/covers6/60485.jpg",
     title: "ממבט ראשון - שבריר השניה שבו אנו מקבלים החלטות",
     author: "מלקולם גלדוול",
-    bookId: "60485",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210672/ms4a6bqtq0exr60otyb8.jpg",
   },
   {
-    imgSrc: "/bookimages/covers66/669136.jpg",
     title: "מותו של זיגמונד פרויד - פרויד מול היטלר: מורשתו המוסרית והפוליטית",
     author: "מרק אדמונדסון",
-    bookId: "669136",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210671/ihincrvyhm2wgwcbj8yb.jpg",
   },
   {
-    imgSrc: "/bookimages/covers3/33884.jpg",
     title: "ילדות אופטימית - תוכנית פסיכולוגית לבניית החוסן הנפשי של ילדים",
     author: "מרטין סליגמן",
-    bookId: "33884",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210671/h8fkncs6fneigodyhzgg.jpg",
   },
   {
-    imgSrc: "/bookimages/covers68/689835.jpg",
     title:
       "תקשורת לא-אלימה - תקשורת מקרבת - שפה לחיים - פריצת-דרך ביחסים בכל תחומי החיים",
     author: "מרשאל רוזנברג",
-    bookId: "689835",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210671/dg4j4vmrctnnldkz2isq.jpg",
   },
   {
-    imgSrc: "/bookimages/covers21/219979.jpg",
     title: "הפסיכואנליזה אחרי פרויד - פסיכה ספריה פסיכולוגית #",
     author: "פנחס נוי",
-    bookId: "135975",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210672/wyrzmvxpljxhrr4mlisq.jpg",
   },
 ];
 
 exports.philosophyRecommendations = [
   {
-    imgSrc: "/bookimages/covers69/690746.jpg",
     title: "קיצור תולדות הזמן - רכה",
     author: "סטיבן ו' הוקינג",
-    bookId: "690746",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210674/wf5jdihrslcxkbplk07g.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/794.jpg",
     title: "חייו ומותו של סוקרטס",
     author: "אפלטון",
-    bookId: "794",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210674/zuyskvoob4vdobohsxvv.jpg",
   },
   {
-    imgSrc: "/bookimages/covers21/216037.jpg",
     title: "מטריקס ופילוסופיה - ברוכים הבאים למדבר של הממשי",
     author: "עורך וויליאם  ארווין",
-    bookId: "216037",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210674/gxpddbp0rw7x5zoqsgif.jpg",
   },
   {
-    imgSrc: "/bookimages/covers68/688019.jpg",
     title: "על הדברים החשובים באמת",
     author: "חיים שפירא",
-    bookId: "688019",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210674/ohg8mr7nphvid23e2ila.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/937043.jpg",
     title: "לחשוב! - מבוא חדש לפילוסופיה",
     author: "סיימון בלקברן",
-    bookId: "937043",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210674/faazqyfvm4ouzedju7nx.jpg",
   },
   {
-    imgSrc: "/bookimages/covers4/44370.jpg",
     title: "גורדייף והעבודה הפנימית",
     author: "אילן עמית (כרוך)",
-    bookId: "44370",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210674/td5jlhe4vnyet7mjspfp.jpg",
   },
   {
-    imgSrc: "/bookimages/covers5/52707.jpg",
     title: "שיחות על תורת הנבואה",
     author: "ישעיהו ליבוביץ",
-    bookId: "15574",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210674/hlt8v0qafmkx2eugwqlo.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/704.jpg",
     title: "הפילוסופים הגדולים שלנו - הפילוסופיה היהודית בימי הביניים",
     author: "פרופ' אליעזר שביד",
-    bookId: "704",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210674/ofvqmut522ag5dvivma2.jpg",
   },
   {
-    imgSrc: "/bookimages/covers66/669319.jpg",
     title: "חי אבן יקט'אן",
     author: "אבן טופיל",
-    bookId: "669319",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210674/d8bd1eqjfdn6fsw3uwpa.jpg",
   },
   {
-    imgSrc: "/bookimages/covers68/689252.jpg",
     title: "הברבור השחור - השפעתו המטלטלת של הבלתי צפוי על הכלכלה והחיים",
     author: "נסים ניקולס טאלב",
-    bookId: "689252",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210674/tz9hbuhyrrymm7vw0ini.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/1926.jpg",
     title: "מיתולוגיות",
     author: "רולאן בארת",
-    bookId: "1926",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210674/f9gnbc2bzpswsltefezx.jpg",
   },
   {
-    imgSrc: "/bookimages/covers69/695944.jpg",
     title: "יסודות הטוטליטריות",
     author: "חנה ארנדט",
-    bookId: "695944",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210674/o4nyz6ft4xaasvdchbtt.jpg",
   },
   {
-    imgSrc: "/bookimages/covers21/213723.jpg",
     title: "המפץ הגדול",
     author: "סיימון סינג",
-    bookId: "213723",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210674/twgbcd3iml0phdgjzjzr.jpg",
   },
   {
-    imgSrc: "/bookimages/covers21/217986.jpg",
     title: "הורדוס מלך רודף ורדוף",
     author: "אריה כשר",
-    bookId: "217986",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210673/yg2wo9vrx2bnuyjfbcz7.jpg",
   },
   {
-    imgSrc: "/bookimages/covers14/145297.jpg",
     title:
       "המוזיקה של המספרים הראשוניים - החיפוש אחר פתרון התעלומה המתמטית הגדולה ביותר - פילוסופיה ומדע #",
     author: "מרכוס דו סוטוי",
-    bookId: "145297",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210674/oh1lt7sxmbjkcrwhk7bj.jpg",
   },
   {
-    imgSrc: "/bookimages/covers21/217566.jpg",
     title: "סימולקרות וסימולציה",
     author: "ז'אן בודריאר",
-    bookId: "217566",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210674/lrurkuzunfxk4ne6wfbz.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/9365.jpg",
     title: "פרקי מבוא לאפלטון - אוניברסיטה משודרת #",
     author: "יוחנן גליקר",
-    bookId: "9365",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210674/bc612lnilr4csarnvlew.jpg",
   },
   {
-    imgSrc: "/bookimages/covers2/22087.jpg",
     title: "נוכחותו של המיתוס",
     author: "לשק קולקובסקי",
-    bookId: "22087",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210674/rept9jkmyhzdjyaa0a1v.jpg",
   },
   {
-    imgSrc: "/bookimages/covers95/956330.jpg",
     title: "פילוסופיית האהבה של קירקגור",
     author: "שרון קרישק",
-    bookId: "956330",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210674/vafmmemyleqkz4l0iwya.jpg",
   },
   {
-    imgSrc: "/bookimages/covers5/50099.jpg",
     title: "שיחות על מדע וערכים",
     author: "ישעיהו ליבוביץ",
-    bookId: "50099",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210674/xpch2iekkvob9x3t1dkb.jpg",
   },
 ];
 
 exports.historyRecommendations = [
   {
-    imgSrc: "/bookimages/covers1/15805.jpg",
     title: "שורשים ושיעורים בזמן",
     author: 'ד"ר בריאן ל. וייס',
-    bookId: "15805",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209621/v3hwj0awt2o3uzbmzwqv.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/930552.jpg",
     title: "רגעים היסטוריים ורגעים היסטריים - החלטות בתנאי משבר",
     author: "פרופ' מיכאל הרסגור",
-    bookId: "930552",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209621/iuhoi7ff4eyjpwuawff5.jpg",
   },
   {
-    imgSrc: "/bookimages/covers67/671104.jpg",
     title: "דוקטרינת ההלם - עליית הקפיטליזם של האסון",
     author: "נעמי קליין",
-    bookId: "671104",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209620/a3ypjwrv4bqwyttaao3n.jpg",
   },
   {
-    imgSrc: "/bookimages/covers68/689884.jpg",
     title: "תורת הכאוס ומדע ההיסטוריה",
     author: "יוסף דן",
-    bookId: "689884",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209621/qwtnnzjfusliqg8ogljn.jpg",
   },
   {
-    imgSrc: "/bookimages/covers68/689378.jpg",
     title: "מכתבים מבית הסוהר",
     author: "רוזה לוקסמבורג",
-    bookId: "394973",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209620/h8eoiaq36bd97f7qge3q.jpg",
   },
   {
-    imgSrc: "/bookimages/covers22/228475.jpg",
     title: "המבול של נוח",
     author: "ויליאם ריאן",
-    bookId: "228475",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209621/vzxyls3gaua4pqhsvrh8.jpg",
   },
   {
-    imgSrc: "/bookimages/covers22/220670.jpg",
     title: "אחרון היהודים",
     author: "נוח גורדון",
-    bookId: "220670",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209621/qxhzronbl75thsvov0uw.jpg",
   },
   {
-    imgSrc: "/bookimages/covers69/691277.jpg",
     title: "היסטוריה של העולם לצעירים מכל הגילים - עליית הגג #",
     author: "ארנסט הנס גומבריך",
-    bookId: "691277",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209622/jplfigbxg0basefdxq0v.jpg",
   },
   {
-    imgSrc: "/bookimages/covers68/689691.jpg",
     title: "האבודים  - שישה מתוך שישה מיליון",
     author: "דניאל מנדלסון",
-    bookId: "315852",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209621/mou2g4t3zufijz5ho0as.jpg",
   },
   {
-    imgSrc: "/bookimages/covers90/907187.jpg",
     title: "מסעות בלי קנה מידה - עולמות #",
     author: "משה גלעד",
-    bookId: "907187",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209621/tlnretdfjbutkmfrgdne.jpg",
   },
   {
-    imgSrc: "/bookimages/covers21/218418.jpg",
     title: "היסטוריה עממית של ארצות הברית - מ-1492 ועד ימינו",
     author: "הווארד זין",
-    bookId: "218418",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209621/jmxjj3c9wcdtradtovzq.jpg",
   },
   {
-    imgSrc: "/bookimages/covers3/36505.jpg",
     title: "הספרים על מדף הספרים - ספרית אפקים",
     author: "הנרי פטרוסקי",
-    bookId: "36505",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209621/nsmqjsf4p62zholzrveq.jpg",
   },
   {
-    imgSrc: "/bookimages/covers22/228636.jpg",
     title: "הימלר - רייכספיהרר אס-אס",
     author: "פיטר פדפילד",
-    bookId: "228636",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209621/eia9wrfvrzztxshax0ic.jpg",
   },
   {
-    imgSrc: "/bookimages/covers3/39336.jpg",
     title: "המיתולוגיה הספרדית - מיתוסים - סדרת המיתוסים #",
     author: "רון ברקאי",
-    bookId: "39336",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209620/fhqwqxtvvhhwmc5kvz7g.jpg",
   },
   {
-    imgSrc: "/bookimages/covers21/217604.jpg",
     title: "אשמה סבל וזיכרון",
     author: "גלעד מרגלית",
-    bookId: "217604",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209621/abl0su5rmc5th04ugcyb.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/5297.jpg",
     title: "תחושת המציאות - עיונים ברעיונות ובתולדותיהם",
     author: "פרופ' ישעיה ברלין",
-    bookId: "5297",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209621/u9wpk90lvx5of4mbau3z.jpg",
   },
   {
-    imgSrc: "/bookimages/covers63/633802.jpg",
     title: "צ'רצ'יל ומלחמה",
     author: "ג'פרי בסט",
-    bookId: "633802",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209621/fstcottiy8yhk0relsni.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/9287.jpg",
     title: "מבוא לתקופת הרנסנס (הרנסאנס)",
     author: "מיכאל הר-סגור",
-    bookId: "9287",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209621/ok7o4qeostgfmxoqhgec.jpg",
   },
   {
-    imgSrc: "/bookimages/covers5/53481.jpg",
     title: "המניפסט הקומוניסטי במבחן הזמן",
     author: "שונים",
-    bookId: "53481",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209620/ootpfkk112qyuz9cxmnk.jpg",
   },
 ];
 
 exports.comicsRecommendations = [
   {
-    imgSrc: "/bookimages/covers68/688901.jpg",
     title: "בון 3 - עין הסערה - בון #3",
     author: "ג'ף סמית",
-    bookId: "688901",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209616/vkk1q4afurnff2os34qu.jpg",
   },
   {
-    imgSrc: "/bookimages/covers90/905053.jpg",
     title: "חתולו של הרב",
     author: "ז'ואן ספר",
-    bookId: "905053",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209615/qrowwcmq3pqcrbrj8zmu.jpg",
   },
   {
-    imgSrc: "/bookimages/covers22/229184.jpg",
     title: "זבנג 20",
     author: "פינק אורי",
-    bookId: "229184",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209615/pkzyp8z1lbx4hkg96ydh.jpg",
   },
   {
-    imgSrc: "/bookimages/covers61/612517.jpg",
     title: "בון 2 - המרוץ הגדול - בון #2",
     author: "ג'ף סמית",
-    bookId: "612517",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209615/yqqllkcuhjzulfbii7lt.jpg",
   },
   {
-    imgSrc: "/bookimages/covers93/936079.jpg",
     title: "בון 6 - מערת הזקן - בון #6",
     author: "ג'ף סמית",
-    bookId: "935839",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209616/cllfrw8vvcz1wtgk1xz0.jpg",
   },
   {
-    imgSrc: "/bookimages/covers3/35638.jpg",
     title: "זבנג! - למכשף המתחיל או הארי פלונטר והמכשף הארור",
     author: "אורי פינק",
-    bookId: "35638",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209615/xsgbej1vdb813uqo7i7u.jpg",
   },
   {
-    imgSrc: "/bookimages/covers55/556638.jpg",
     title: "מעבר לקו",
     author: "שי צ'רקה",
-    bookId: "556638",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209615/ftavax0ymvbtaztmcbhs.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/3608.jpg",
     title: "זבנגלה בריבוע",
     author: "אורי פינק",
-    bookId: "3608",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209614/lqwilen1ynhbdeqtsx0g.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/3610.jpg",
     title: "דיאט זבנג 4",
     author: "אורי פינק",
-    bookId: "3610",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209615/nyj09lv0k04dhcpy52fa.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/3601.jpg",
     title: "הוגו 1",
     author: "קורן שדמי",
-    bookId: "3601",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209615/vu9t7zbeoox74ns46q0s.jpg",
   },
   {
-    imgSrc: "/bookimages/covers95/956096.jpg",
     title: "סקוט פילגרים נגד העולם 2",
     author: "בריאן לי או'מאלי",
-    bookId: "956096",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209615/beffcquobwz4umeqcq03.jpg",
   },
   {
-    imgSrc: "/bookimages/covers69/690739.jpg",
     title: "טיטוף 2 - הכיוון בחיים",
     author: "אורי פינק",
-    bookId: "690739",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699209614/ligvuqstsm4psp82neki.jpg",
   },
 ];
 
 exports.managementRecommendations = [
   {
-    imgSrc: "/bookimages/covers55/556578.jpg",
-    title: "שיחות על תורת המשחקים - אסטרטגיות, החלטות ותעתועי חשיבה",
-    author: "חיים שפירא",
-    bookId: "556578",
-  },
-  {
-    imgSrc: "/bookimages/covers68/688832.jpg",
     title: "ארבע שעות עבודה בשבוע ",
     author: "טימותי פריס",
-    bookId: "688832",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210676/hwgap66kjp8jpfb1rk1e.jpg",
   },
   {
-    imgSrc: "/bookimages/covers21/218870.jpg",
     title: "מנהיגות במבחן - להוביל שינוי ולהישאר בחיים",
     author: "רונלד א' חפץ",
-    bookId: "217728",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210676/iecai5cx7e923hieaien.jpg",
   },
   {
-    imgSrc: "/bookimages/covers5/56651.jpg",
     title: "הקונסטלציה הפוסט-לאומית",
     author: "יורגן הברמאס",
-    bookId: "56651",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210676/eyjma1inhqc8yqa8m1gd.jpg",
   },
   {
-    imgSrc: "/bookimages/covers21/213749.jpg",
     title: "הכול לפי מידה - המסע בן שבע השנים לקביעת המדידה המטרית",
     author: "קן אלדר",
-    bookId: "213749",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210676/roomh1iiqodehwprqiau.jpg",
   },
   {
-    imgSrc: "/bookimages/covers4/43353.jpg",
     title: 'המנכ"ל והדלת המסתובבת - טקטיקות הצלחה שלא תלמדו בבתי ספר לעסקים',
     author: "פיטר קאש",
-    bookId: "43353",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210676/e9wgcz6rmeevafnfmz99.jpg",
   },
   {
-    imgSrc: "/bookimages/covers59/591197.jpg",
     title: "תעתועי האקראיות - הופעתו של הברבור השחור בשוקי ההון (ובחיים)",
     author: "נסים ניקולס טאלב",
-    bookId: "591197",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210676/uaabdzgs9tajl3ngzm4l.jpg",
   },
   {
-    imgSrc: "/bookimages/covers68/688839.jpg",
     title: "מצוינים - ממה עשויה הצלחה",
     author: "מלקולם גלדוול",
-    bookId: "688839",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210676/a0khvoqmhhylivnth1uh.jpg",
   },
   {
-    imgSrc: "/bookimages/covers4/40084.jpg",
     title: "No bull - מסע ההשקעות שלי בג'ונגל של וול סטריט",
     author: "מייקל סטיינהרדט",
-    bookId: "40084",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210676/szv06mixi97kk26kspgq.jpg",
   },
   {
-    imgSrc: "/bookimages/covers4/44361.jpg",
     title: "רציונליות, הוגנות, אושר - מבחר מאמרים",
     author: "דניאל כהנמן",
-    bookId: "44361",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210676/pdhmunlzmkxzt5inp98e.jpg",
   },
   {
-    imgSrc: "/bookimages/covers/137621.jpg",
     title: "הליכת אקראי בוול סטריט",
     author: "ברטון מלכיאל",
-    bookId: "137621",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210678/leisb7fskbmsgk98lqrw.jpg",
   },
   {
-    imgSrc: "/bookimages/covers60/604725.jpg",
     title: "ברוכים הבאים לשוק החופשי",
     author: "תמר בן-יוסף",
-    bookId: "604725",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210676/kuiknh2e3ihcohvsdaux.jpg",
   },
   {
-    imgSrc: "/bookimages/covers22/221236.jpg",
     title: "כולם זוכים  - משא ומתן בחיי היומיום",
     author: "קרל ליונס",
-    bookId: "221236",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210676/agfuziuucjqh8ooprwyw.jpg",
   },
   {
-    imgSrc: "/bookimages/covers0/1774.jpg",
     title: "ללכת עם לוגו",
     author: "שמואל ורשבסקי",
-    bookId: "1774",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210676/dm2qvmd3vx4lwi08bphz.jpg",
   },
   {
-    imgSrc: "/bookimages/covers64/644306.jpg",
     title: "כלכלה בימי משבר - איך יוצאים מזה?",
     author: "פול קרוגמן",
-    bookId: "644306",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210676/v2ayeeo6v00settlj636.jpg",
   },
   {
-    imgSrc: "/bookimages/covers12/123211.jpg",
     title: "ניהולוגיה - ניהול - תיאוריה ויישום",
     author: "איתי שילוני",
-    bookId: "123211",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210676/ahzkg1sa8qobp5bmcx6v.jpg",
   },
   {
-    imgSrc: "/bookimages/covers43/435481.jpg",
     title: "מכונת הכסף - המשקיעים שפיצחו את השיטה",
     author: "מייקל לואיס",
-    bookId: "435481",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210676/xb1zswlynlqslyiufe1t.jpg",
   },
   {
-    imgSrc: "/bookimages/covers68/689924.jpg",
     title: "הקפיצה הבאה - יזמות: להפוך סיכון להזדמנות",
     author: "רונלד כהן",
-    bookId: "689924",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210676/le96zxj8cy5ypqvk2uxa.jpg",
   },
   {
-    imgSrc: "/bookimages/covers64/644308.jpg",
     title: "שלום לך עצלות - למה לא משתלם לעבוד קשה",
     author: "קורין מאייר",
-    bookId: "644308",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210677/ibbz5t21zgqa4pgtshqg.jpg",
   },
   {
-    imgSrc: "/bookimages/covers5/59522.jpg",
     title: "לדבר בפני קהל - על תורת הנאום ואמנות השכנוע",
     author: "יניב זייד",
-    bookId: "59522",
+    imgSrc:
+      "http://res.cloudinary.com/dynigstko/image/upload/v1699210676/nqi0mzd1k1pvassiez3j.jpg",
   },
 ];
