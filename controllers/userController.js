@@ -32,8 +32,6 @@ const getLastTen = async (userEmail) => {
       .filter((randomUser) => randomUser.email !== userEmail)
       .slice(0, 10);
 
-    console.log(lastTenFiltered);
-
     return lastTenFiltered;
   } catch (err) {
     console.log("didnt work function ", err);
@@ -57,40 +55,10 @@ exports.testCloudinary = async (req, res) => {
     })
   );
 
-  const philosophyRecommendations = await Promise.all(
-    allGenres.philosophyRecommendations.map(async (unitBook) => {
-      const photoString = await addBookPhoto(
-        `https://s3-eu-west-1.amazonaws.com/simania-public-assets${unitBook.imgSrc}`
-      );
-
-      return {
-        title: unitBook.title,
-        author: unitBook.author,
-        imgSrc: photoString.url,
-      };
-    })
-  );
-
-  const managementRecommendations = await Promise.all(
-    allGenres.managementRecommendations.map(async (unitBook) => {
-      const photoString = await addBookPhoto(
-        `https://s3-eu-west-1.amazonaws.com/simania-public-assets${unitBook.imgSrc}`
-      );
-
-      return {
-        title: unitBook.title,
-        author: unitBook.author,
-        imgSrc: photoString.url,
-      };
-    })
-  );
-
   ///
   //////
 
   const arraybooki = {
-    managementRecommendations,
-    philosophyRecommendations,
     psychologyRecommendations,
   };
 
@@ -333,8 +301,6 @@ exports.updateUserPhoto = async (req, res) => {
 
     imageResponse = await addUserPhoto(req.body.imgValue);
 
-    console.log("img response is .... ", imageResponse);
-
     await User.findOneAndUpdate(
       { email: req.body.userEmail },
       { picture: imageResponse ? imageResponse.url : null }
@@ -360,6 +326,23 @@ exports.updateUserBasicDetails = async (req, res) => {
         city,
         favoriteWriter,
         genres,
+      }
+    );
+    res.status(200).json("details were updated successfully");
+  } catch (err) {
+    console.log("error occured...", err);
+    res.status(500).json(err);
+  }
+};
+
+exports.updateUserFreeContent = async (req, res) => {
+  const { email, freeText, writingText } = req.body;
+  try {
+    await User.findOneAndUpdate(
+      { email },
+      {
+        freeText: freeText,
+        writingDescription: writingText,
       }
     );
     res.status(200).json("details were updated successfully");

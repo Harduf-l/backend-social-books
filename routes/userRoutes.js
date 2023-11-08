@@ -11,7 +11,7 @@ router.post(
   "/update-user-basic-details",
   userController.updateUserBasicDetails
 );
-
+router.post("/update-user-free-content", userController.updateUserFreeContent);
 router.post("/test-cloudinary", userController.testCloudinary);
 
 router.get("/get-by-id/:id", userController.getById);
