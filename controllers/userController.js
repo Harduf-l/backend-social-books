@@ -12,7 +12,6 @@ const {
   pendingConnections,
   friendsArrayId,
 } = require("./connectionController");
-const { novalsRecommendations } = require("../data/genresRecommendation");
 const allGenres = require("../data/genresRecommendation");
 
 const {
@@ -130,7 +129,7 @@ exports.tokenCheck = async (req, res) => {
       //////////
       suggestedUsers = chooseRandomAmount(suggestedUsers, 6);
 
-      const recommendationBookArray = await getRecommendedBooksBasedOnGenres(
+      const booksRecommendation = getRecommendedBooksBasedOnGenres(
         foundUser.genres
       );
 
@@ -141,7 +140,7 @@ exports.tokenCheck = async (req, res) => {
         status: "ok",
         userDetails: foundUser,
         suggestedUsers,
-        recommendationBookArray,
+        booksRecommendation,
         myPendingConnections,
         lastTenUsersRegistered,
       });
@@ -189,7 +188,7 @@ exports.login = async (req, res) => {
     //////////
 
     suggestedUsers = chooseRandomAmount(suggestedUsers, 6);
-    const recommendationBookArray = await getRecommendedBooksBasedOnGenres(
+    const booksRecommendation = getRecommendedBooksBasedOnGenres(
       foundUser.genres
     );
 
@@ -200,7 +199,7 @@ exports.login = async (req, res) => {
       token: token,
       userDetails: foundUser,
       suggestedUsers,
-      recommendationBookArray,
+      booksRecommendation,
       myPendingConnections,
       lastTenUsersRegistered,
     });
@@ -256,9 +255,7 @@ exports.addUser = async (req, res) => {
     //////////
     suggestedUsers = chooseRandomAmount(suggestedUsers, 6);
 
-    const recommendationBookArray = await getRecommendedBooksBasedOnGenres(
-      user.genres
-    );
+    const booksRecommendation = getRecommendedBooksBasedOnGenres(user.genres);
 
     const token = jwt.sign(
       { id: user._id, email: user.email },
@@ -273,7 +270,7 @@ exports.addUser = async (req, res) => {
       status: "ok",
       userDetails: user,
       suggestedUsers,
-      recommendationBookArray,
+      booksRecommendation,
       token,
       welcomeMessage,
       lastTenUsersRegistered,

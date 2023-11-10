@@ -1,5 +1,35 @@
-// const axios = require("axios");
-// const cheerio = require("cheerio");
+const axios = require("axios");
+const cheerio = require("cheerio");
+const fs = require("fs");
+const { getBiggerResolutionImage } = require("../helpers/utils");
+
+/// creating genre book list from goodreads
+exports.createGenreBookList = (req, res) => {
+  axios
+    .get(`https://www.goodreads.com/shelf/show/management`)
+    .then((response) => {
+      const $ = cheerio.load(response.data);
+
+      const bookUnits = $(".elementList");
+
+      bookUnits.toArray().map((book, index) => {
+        const title = book.children[1].children[0].next.attribs.title;
+        const photo = getBiggerResolutionImage(
+          book.children[1].children[0].next.children[0].attribs.src
+        );
+        const author =
+          book.children[1].children[9].children[1].children[1].children[0]
+            .children[0].data;
+
+        // ערך 50 ו-51 הם אנדיפיינד
+
+        console.log({ index, title, photo, author }, ",");
+      });
+    })
+    .catch((err) => {
+      console.log("error is in createGenreBookList", err);
+    });
+};
 
 // exports.getSingleBookData = (req, res) => {
 //   const bookId = req.query.bookId;

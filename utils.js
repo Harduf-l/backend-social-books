@@ -17,6 +17,25 @@ const {
   managementRecommendations,
 } = require("./data/genresRecommendation");
 
+const {
+  novalsRecommendationsEng,
+  thrillersRecommendationsEng,
+  biographyRecommendationsEng,
+  poetryRecommendationsEng,
+  fantasyRecommendationsEng,
+  madabRecommendationsEng,
+  childrenRecommendationsEng,
+  teenagersRecommendationsEng,
+  playsRecommendationsEng,
+  nonFictionRecommendationsEng,
+  selfHelpRecommendationsEng,
+  psychologyRecommendationsEng,
+  philosophyRecommendationsEng,
+  historyRecommendationsEng,
+  comicsRecommendationsEng,
+  managementRecommendationsEng,
+} = require("./data/genresRecommendationEng");
+
 exports.chooseRandomAmount = (dataArray, amount) => {
   return chooseRandomAmountFunction(dataArray, amount);
 };
@@ -40,7 +59,7 @@ function chooseRandomAmountFunction(dataArray, amount) {
   return recommendationArray;
 }
 
-exports.getRecommendedBooksBasedOnGenres = async (genresArray) => {
+exports.getRecommendedBooksBasedOnGenres = (genresArray) => {
   const genreObject = {
     novel: novalsRecommendations,
     thriller: thrillersRecommendations,
@@ -60,16 +79,59 @@ exports.getRecommendedBooksBasedOnGenres = async (genresArray) => {
     management: managementRecommendations,
   };
 
-  let possibleBooksRecommendatios = [];
+  const genreObjectEng = {
+    novel: novalsRecommendationsEng,
+    thriller: thrillersRecommendationsEng,
+    biographic: biographyRecommendationsEng,
+    poetry: poetryRecommendationsEng,
+    fantasy: fantasyRecommendationsEng,
+    madab: madabRecommendationsEng,
+    children: childrenRecommendationsEng,
+    teenagers: teenagersRecommendationsEng,
+    plays: playsRecommendationsEng,
+    nonfiction: nonFictionRecommendationsEng,
+    "self help": selfHelpRecommendationsEng,
+    psychology: psychologyRecommendationsEng,
+    phlipsophy: philosophyRecommendationsEng,
+    history: historyRecommendationsEng,
+    comics: comicsRecommendationsEng,
+    management: managementRecommendationsEng,
+  };
+
+  let possibleBooksRecommendatiosHeb = [];
 
   genresArray.forEach((genre) => {
     if (genreObject[genre]) {
-      possibleBooksRecommendatios = [
-        ...possibleBooksRecommendatios,
+      possibleBooksRecommendatiosHeb = [
+        ...possibleBooksRecommendatiosHeb,
         ...genreObject[genre],
       ];
     }
   });
 
-  return chooseRandomAmountFunction([...possibleBooksRecommendatios], 10);
+  let possibleBooksRecommendatiosEng = [];
+
+  genresArray.forEach((genre) => {
+    if (genreObjectEng[genre]) {
+      possibleBooksRecommendatiosEng = [
+        ...possibleBooksRecommendatiosEng,
+        ...genreObjectEng[genre],
+      ];
+    }
+  });
+
+  const booksRecommendation = {
+    hebrewRecommendations: chooseRandomAmountFunction(
+      [...possibleBooksRecommendatiosHeb],
+      10
+    ),
+    englishRecommendations: chooseRandomAmountFunction(
+      [...possibleBooksRecommendatiosEng],
+      10
+    ),
+  };
+
+  console.log("booksRecommendation is.... ", booksRecommendation);
+
+  return booksRecommendation;
 };
